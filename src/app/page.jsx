@@ -29,20 +29,24 @@ const heroSocialLinks = [
 // FunFact Data
 const funfaceData = [
   {
-    title: 'Global Happy Clients',
-    factNumber: '40K',
+    title: 'Years of Experience',
+    factNumber: '10',
+    color: '#ff4a17',
   },
   {
-    title: 'Project Completed',
-    factNumber: '50K',
+    title: 'Specializing in Webflow',
+    factNumber: '5',
+    color: '#00d282',
   },
   {
-    title: 'Team Members',
-    factNumber: '245',
+    title: 'Projects Completed',
+    factNumber: '150',
+    color: '#0372e0',
   },
   {
-    title: 'Digital products',
-    factNumber: '550',
+    title: 'Happy Clients',
+    factNumber: '120',
+    color: '#f9a825',
   },
 ];
 // Portfolio Data
@@ -78,8 +82,8 @@ export default function Home() {
     <>
       {/* Start Hero Section */}
       <Hero
-        title="Creativity In <br/>Our Blood Line"
-        subtitle="We deliver best problem solving solution for our client and provide finest finishing product in present and upcoming future."
+        title="Website designer and developer in <br/><span>Leeds</span>"
+        subtitle="With over 10 years of experience in the creative industry, I have a deep understanding of design principles that allows me to create websites that not only look great, but also function flawlessly."
         btnText="Get a Quote"
         btnLink="/contact"
         scrollDownId="#service"
@@ -93,8 +97,8 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="Our fun fact"
-          subtitle="Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis."
+          title="A Brilliant Web Developer"
+          subtitle="As a creative and passionate designer and developer, I can deliver something truly unique and dynamique. Let's collaborate and create something great."
           data={funfaceData}
         />
       </div>
@@ -108,7 +112,7 @@ export default function Home() {
             <Div className="col-xl-4">
               <SectionHeading
                 title="Services we can help you with"
-                subtitle="What Can We Do"
+                subtitle="Our Services"
                 btnText="See All Services"
                 btnLink="/service"
               />
@@ -119,7 +123,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="UI/UX design"
+                    title="Website Design & Develop"
                     link="/service/service-details"
                     src="/images/service_1.jpeg"
                     alt="Service"
@@ -129,7 +133,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="React.js Development"
+                    title="eCommerce"
                     link="/service/service-details"
                     src="/images/service_2.jpeg"
                     alt="Service"
@@ -138,7 +142,7 @@ export default function Home() {
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Digital Marketing"
+                    title="Digital Analytics"
                     link="/service/service-details"
                     src="/images/service_3.jpeg"
                     alt="Service"
@@ -148,7 +152,7 @@ export default function Home() {
                 <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Technology"
+                    title="Web Hosting"
                     link="/service/service-details"
                     src="/images/service_4.jpeg"
                     alt="Service"
@@ -168,7 +172,7 @@ export default function Home() {
       <Div>
         <Div className="container">
           <SectionHeading
-            title="Portfolio to explore"
+            title="Our Works"
             subtitle="Latest Projects"
             variant="cs-style1 text-center"
           />
@@ -189,7 +193,7 @@ export default function Home() {
             <Div className="col-xl-4">
               <SectionHeading
                 title="We get multiple awards"
-                subtitle="Our Awards"
+                subtitle="Testimonials"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
@@ -206,8 +210,8 @@ export default function Home() {
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Our agile process is ability to adapt and respond to change. Agile
-          organizations view change as an opportunity, not a threat.
+          Design is not just what it looks like and feels like. Design is how it
+          works.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
@@ -245,7 +249,7 @@ export default function Home() {
             <Div className="col-xl-4">
               <SectionHeading
                 title="Explore recent publication"
-                subtitle="Our Blog"
+                subtitle="Our News"
                 btnText="View More Blog"
                 btnLink="/blog"
               />
@@ -277,7 +281,7 @@ export default function Home() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Let's disscuse make <br />something <i>cool</i> together"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

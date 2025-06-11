@@ -1,7 +1,15 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+
 .cs-row_gap_20 {
   margin-left: -10px;
   margin-right: -10px;
-  > div {
+  > * {
     padding-left: 10px;
     padding-right: 10px;
   }
@@ -194,7 +202,7 @@ hr {
 }
 
 .cs-gradient_bg_1 {
-  background: linear-gradient(267.18deg, #161616 0%, #080808 100%);
+  background: linear-gradient(267.18deg, #2c2aa7 0%, #080808 100%);
 }
 
 .cs-text_btn {
@@ -278,8 +286,8 @@ hr {
   line-height: 1.5em;
   font-weight: 600;
   border-radius: 15px;
-  background-color: $accent;
-  color: #fff;
+  background: linear-gradient(to right, #d112b1, #000000);
+  color: $white;
   cursor: pointer;
   &:before {
     content: '';
@@ -1585,7 +1593,7 @@ label {
   }
 }
 .cs-gradient_1 {
-  background: linear-gradient(267deg, #161616 0%, #080808 100%);
+  background: linear-gradient(267deg, #161616 0%, #eafa0b 100%);
 }
 .cs-list.cs-style_2 {
   li {

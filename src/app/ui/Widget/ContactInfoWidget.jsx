@@ -8,15 +8,15 @@ export default function ContactInfoWidget({withIcon, title}) {
       <ul className="cs-menu_widget cs-style1 cs-mp0">
         <li>
           {withIcon?<span className='cs-accent_color'><Icon icon="material-symbols:add-call-rounded" /></span>:''}
-          +44 454 7800 112
+          +44 744 842 9748
         </li>
         <li>
           {withIcon?<span className='cs-accent_color'><Icon icon="mdi:envelope" /></span>:''}
-          infotech@arino.com
+          info@remlyx.com
         </li>
         <li>
           {withIcon?<span className='cs-accent_color'><Icon icon="mdi:map-marker" /></span>:''}
-          50 Wall Street Suite, 44150 <br/>Ohio, United States
+          LS12 4DA, Leeds, UK
         </li>
       </ul>
     </>
