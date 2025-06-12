@@ -1,3 +1,5 @@
+@use '../default/variable' as *;
+
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -202,7 +204,7 @@ hr {
 }
 
 .cs-gradient_bg_1 {
-  background: linear-gradient(267.18deg, #2c2aa7 0%, #080808 100%);
+  background: linear-gradient(267.18deg, rgb(5, 5, 14) 0%, #080808 100%);
 }
 
 .cs-text_btn {
@@ -362,7 +364,7 @@ hr {
   height: 40px;
   width: 40px;
   border-radius: 5px;
-  background-color: #000;
+  background-color: #000000;
   &.active {
     background-color: $accent;
     color: #fff;
@@ -695,7 +697,14 @@ label {
 }
 
 .cs-fixed_bg {
-  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .cs-parallax [class*='cs-to_'],
@@ -968,34 +977,11 @@ label {
 }
 
 .cs-page_heading.cs-style1 {
-  height: 650px;
-  padding: 120px 0 50px;
-  position: relative;
-  &::after {
-    content: '';
-    position: absolute;
-    right: -30px;
-    top: -30px;
-    height: 151px;
-    width: 151px;
-    background: $accent;
-    opacity: 0.8;
-    filter: blur(125px);
-  }
-  > * {
+  padding: 145px 0;
+  background-color: transparent;
+  .cs-page_heading_in {
     position: relative;
     z-index: 2;
-  }
-  .cs-page_heading_in {
-    display: inline-block;
-  }
-  .breadcrumb {
-    justify-content: flex-end;
-    margin-bottom: 0;
-    color: $ternary;
-  }
-  .breadcrumb-item.active {
-    color: $white;
   }
   .cs-page_title {
     margin-bottom: 18px;
@@ -1668,5 +1654,20 @@ label {
         padding-top: 30px;
       }
     }
+  }
+}
+
+.cs-main_content_wrap {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(13, 13, 13, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+@media screen and (max-width: 1540px) {
+  .cs-case_study .cs-case_study_title {
+    font-size: 100px;
+    padding: 40px 120px;
   }
 }

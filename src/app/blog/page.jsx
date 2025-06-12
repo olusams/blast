@@ -1,5 +1,7 @@
 'use client'
 
+import { useEffect } from 'react';
+import { useDynamicBg } from '../context/DynamicBgContext';
 import Cta from "@/app/ui/Cta";
 import Div from "@/app/ui/Div";
 import PageHeading from "@/app/ui/PageHeading";
@@ -42,11 +44,21 @@ const postData = [
 ];
 
 export default function BlogPage() {
+  const { setBackground, setHeroImage } = useDynamicBg();
+
+  useEffect(() => {
+    setBackground('/images/funfact_bg.jpeg');
+    setHeroImage('/images/blog_hero_bg.jpeg');
+    return () => {
+      setBackground('');
+      setHeroImage('');
+    }
+  }, [setBackground, setHeroImage]);
+
   return (
     <>
       <PageHeading
         title="Our Blog"
-        bgSrc="/images/blog_hero_bg.jpeg"
         pageLinkText="Blog"
       />
       <Spacing lg="150" md="80" />
@@ -79,7 +91,7 @@ export default function BlogPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Let's disscuse make <br />something <i>cool</i> together"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

@@ -1,0 +1,22 @@
+[
+  {
+    "icon": "fa6-brands:facebook-f",
+    "url": "https://www.remlyx.com/facebook"
+  },
+  {
+    "icon": "fa6-brands:linkedin-in",
+    "url": "/"
+  },
+  {
+    "icon": "fa6-brands:twitter",
+    "url": "/"
+  },
+  {
+    "icon": "fa6-brands:youtube",
+    "url": "/"
+  },
+  {
+    "icon": "fa6-brands:slack",
+    "url": "/"
+  }
+] 

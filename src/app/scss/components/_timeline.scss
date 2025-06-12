@@ -1,4 +1,7 @@
+@use '../default/variable' as *;
+
 .cs-time_line.cs-style1 {
+  position: relative;
   h3 {
     font-size: 30px;
     margin-bottom: 15px;

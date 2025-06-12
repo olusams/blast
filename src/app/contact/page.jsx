@@ -1,4 +1,6 @@
 'use client'
+import { useEffect } from 'react';
+import { useDynamicBg } from '../context/DynamicBgContext';
 import Div from "@/app/ui/Div";
 import PageHeading from "@/app/ui/PageHeading";
 import SectionHeading from "@/app/ui/SectionHeading";
@@ -7,11 +9,21 @@ import ContactInfoWidget from "@/app/ui/Widget/ContactInfoWidget";
 import { Icon } from "@iconify/react";
 
 export default function ContactPage() {
+  const { setBackground, setHeroImage } = useDynamicBg();
+
+  useEffect(() => {
+    setBackground('/images/hero_bg_6.jpeg');
+    setHeroImage('/images/contact_hero_bg.jpeg');
+    return () => {
+      setBackground('');
+      setHeroImage('');
+    }
+  }, [setBackground, setHeroImage]);
+
   return (
     <>
       <PageHeading
         title="Contact Us"
-        bgSrc="/images/contact_hero_bg.jpeg"
         pageLinkText="Contact"
       />
       <Spacing lg="150" md="80" />
@@ -19,8 +31,8 @@ export default function ContactPage() {
         <Div className="row">
           <Div className="col-lg-6">
             <SectionHeading
-              title="Do you have a project <br/>in your mind?"
-              subtitle="Getting Touch"
+              title="Let's Forge Your Digital Success Story"
+              subtitle="Get in Touch"
             />
             <Spacing lg="55" md="30" />
             <ContactInfoWidget withIcon />
@@ -29,31 +41,50 @@ export default function ContactPage() {
           <Div className="col-lg-6">
             <form action="#" className="row">
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Full Name*</label>
-                <input type="text" className="cs-form_field" />
+                <label className="cs-primary_color" htmlFor="fullName">
+                  Full Name*
+                </label>
+                <input
+                  type="text"
+                  className="cs-form_field"
+                  id="fullName"
+                />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Email*</label>
-                <input type="text" className="cs-form_field" />
+                <label className="cs-primary_color" htmlFor="email">
+                  Email*
+                </label>
+                <input type="text" className="cs-form_field" id="email" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Project Type*</label>
-                <input type="text" className="cs-form_field" />
+                <label className="cs-primary_color" htmlFor="projectType">
+                  Project Type*
+                </label>
+                <input
+                  type="text"
+                  className="cs-form_field"
+                  id="projectType"
+                />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-6">
-                <label className="cs-primary_color">Mobile*</label>
-                <input type="text" className="cs-form_field" />
+                <label className="cs-primary_color" htmlFor="mobile">
+                  Mobile*
+                </label>
+                <input type="text" className="cs-form_field" id="mobile" />
                 <Spacing lg="20" md="20" />
               </Div>
               <Div className="col-sm-12">
-                <label className="cs-primary_color">Mobile*</label>
+                <label className="cs-primary_color" htmlFor="message">
+                  Message*
+                </label>
                 <textarea
                   cols="30"
                   rows="7"
                   className="cs-form_field"
+                  id="message"
                 ></textarea>
                 <Spacing lg="25" md="25" />
               </Div>

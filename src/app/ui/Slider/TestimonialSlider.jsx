@@ -8,34 +8,42 @@ const testimonialData = [
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '4',
+      'Partnering with Remlyx was a pivotal moment for our business. Their exceptional team delivered a visually stunning, high-performance website that significantly boosted our online presence and drove measurable growth. Their unwavering commitment and meticulous attention to detail were evident in every aspect of the project.',
+    avatarName: 'Sarah Johnson',
+    avatarDesignation: 'CEO, Innovate Ltd.',
+    ratings: '5',
   },
   {
     testimonialThumb: '/images/testimonial_2.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
+      'Remlyx is more than an agency; they are a true strategic partner. They invested the time to deeply understand our vision and masterfully translated it into a digital experience that far exceeded our expectations. Their world-class expertise in UI/UX is unmatched and has transformed our user engagement.',
+    avatarName: 'Linda Chen',
+    avatarDesignation: 'Marketing Director, Tech Solutions',
     ratings: '5',
   },
   {
     testimonialThumb: '/images/testimonial_3.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '4.5',
+      "The Remlyx team is a powerhouse of talent—professional, responsive, and incredibly skilled. They executed our project flawlessly, delivering on time and within budget, with results that have been nothing short of phenomenal. We are beyond thrilled with our new website and the impact it has had on our business.",
+    avatarName: 'Emily Rodriguez',
+    avatarDesignation: 'Founder, The Design Co.',
+    ratings: '5',
   },
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
     testimonialText:
-      'I wish I would have thought of it first. Creative agency is the most tech valuable business resource we have ever purchased. Dude your stuff  is the bomb! eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt to the explicabo.',
-    avatarName: 'Ahon Monsery',
-    avatarDesignation: 'CEO AT TECH',
-    ratings: '3.5',
+      'We entrusted Remlyx with a highly complex e-commerce project, and they delivered with absolute precision. Their profound technical expertise and innovative problem-solving were critical to our success. I wholeheartedly recommend them to any business seeking exceptional results.',
+    avatarName: 'Florence McCarthy',
+    avatarDesignation: 'CTO, Retail Innovations',
+    ratings: '5',
+  },
+  {
+    testimonialThumb: '/images/testimonial_2.jpeg',
+    testimonialText:
+      "Our new website is a masterpiece—visually striking, incredibly fast, and exceptionally user-friendly. The team's passion and dedication were palpable throughout the entire process. We are ecstatic with the final product and have seen a remarkable increase in user engagement and conversions.",
+    avatarName: 'James Anderson',
+    avatarDesignation: 'Founder of Anderson Corp',
+    ratings: '5',
   },
 ];
 

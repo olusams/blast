@@ -2,7 +2,6 @@
 import { useEffect, useState } from 'react';
 import Div from '../Div';
 import Link from 'next/link';
-import DropDown from './DropDown';
 import ContactInfoWidget from '../Widget/ContactInfoWidget';
 import Newsletter from '../Widget/Newsletter';
 import SocialWidget from '../Widget/SocialWidget';
@@ -33,7 +32,7 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" href="/">
-                  <img src="/images/logo.svg" alt="Logo" />
+                  <img src="/images/logorempl.png" alt="Logo" />
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
@@ -99,17 +98,19 @@ export default function Header({ variant }) {
               </Div>
               <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
-                  <span
-                    className="cs-icon_btn"
-                    onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
-                  >
-                    <span className="cs-icon_btn_in">
-                      <span />
-                      <span />
-                      <span />
-                      <span />
+                  <Link href="/">
+                    <span
+                      className="cs-icon_btn"
+                      onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
+                    >
+                      <span className="cs-icon_btn_in">
+                        <span />
+                        <span />
+                        <span />
+                        <span />
+                      </span>
                     </span>
-                  </span>
+                  </Link>
                 </Div>
               </Div>
             </Div>
@@ -133,7 +134,7 @@ export default function Header({ variant }) {
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" href="/">
-            <img src="/images/footer_logo.svg" alt="Logo" />
+            <img src="/images/logorempl.png" alt="Logo" />
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">
@@ -146,7 +147,7 @@ export default function Header({ variant }) {
           <Div className="cs-side_header_box">
             <Newsletter
               title="Subscribe"
-              subtitle="At vero eos et accusamus et iusto odio as part dignissimos ducimus qui blandit."
+              subtitle="Join our mailing list to receive the latest news, updates, and exclusive offers directly in your inbox."
               placeholder="example@gmail.com"
             />
           </Div>

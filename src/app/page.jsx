@@ -1,4 +1,6 @@
 'use client';
+import { useEffect } from 'react';
+import { useDynamicBg } from './context/DynamicBgContext';
 import Cta from '@/app/ui/Cta';
 import Div from '@/app/ui/Div';
 import FunFact from '@/app/ui/FunFact';
@@ -15,80 +17,86 @@ import Spacing from '@/app/ui/Spacing';
 import VideoModal from '@/app/ui/VideoModal';
 import Card from './ui/Card';
 
-// Hero Social Links
-const heroSocialLinks = [
-  {
-    name: 'Behance',
-    links: '/',
-  },
-  {
-    name: 'Twitter',
-    links: '/',
-  },
-];
 // FunFact Data
 const funfaceData = [
   {
-    title: 'Years of Experience',
-    factNumber: '10',
+    title: 'Years in Business',
+    factNumber: '12+',
     color: '#ff4a17',
   },
   {
-    title: 'Specializing in Webflow',
-    factNumber: '5',
+    title: 'Successful Projects',
+    factNumber: '500+',
     color: '#00d282',
   },
   {
-    title: 'Projects Completed',
-    factNumber: '150',
+    title: 'Satisfied Clients',
+    factNumber: '98%',
     color: '#0372e0',
   },
   {
-    title: 'Happy Clients',
-    factNumber: '120',
+    title: 'Growth Delivered',
+    factNumber: '3x',
     color: '#f9a825',
   },
 ];
 // Portfolio Data
 const portfolioData = [
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'E-commerce Platform for a Global Fashion Brand',
+    subtitle: 'Web Development',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_1.jpeg',
+    alt: 'E-commerce Platform for a Global Fashion Brand',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Corporate Website for a Tech Startup',
+    subtitle: 'UI/UX Design',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_2.jpeg',
+    alt: 'Corporate Website for a Tech Startup',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Mobile App for a Leading FinTech Company',
+    subtitle: 'App Development',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_0.jpg',
+    alt: 'Mobile App for a Leading FinTech Company',
   },
   {
-    title: 'Colorful Art Work',
-    subtitle: 'See Details',
+    title: 'Booking System for a Luxury Hotel Chain',
+    subtitle: 'Web Development',
     href: '/portfolio/portfolio-details',
     src: '/images/portfolio_3.jpeg',
+    alt: 'Booking System for a Luxury Hotel Chain',
+  },
+  {
+    title: 'Data Visualization Dashboard for a Marketing Agency',
+    subtitle: 'Web Development',
+    href: '/portfolio/portfolio-details',
+    src: '/images/portfolio_4.jpeg',
+    alt: 'Data Visualization Dashboard for a Marketing Agency',
   },
 ];
 
 export default function Home() {
+  const { setBackground } = useDynamicBg();
+
+  useEffect(() => {
+    setBackground('/images/funfact_bg.jpeg');
+    // Cleanup function to reset background when component unmounts
+    return () => setBackground('');
+  }, [setBackground]);
+
   return (
     <>
       {/* Start Hero Section */}
       <Hero
-        title="Website designer and developer in <br/><span>Leeds</span>"
-        subtitle="With over 10 years of experience in the creative industry, I have a deep understanding of design principles that allows me to create websites that not only look great, but also function flawlessly."
-        btnText="Get a Quote"
-        btnLink="/contact"
+        title="Digital Solutions That Drive Growth"
+        subtitle="Based in Leeds, we craft powerful and intelligent digital solutions that boost user engagement, increase conversions, and deliver lasting value for your business."
+        btnText="Explore Our Work"
+        btnLink="/portfolio"
         scrollDownId="#service"
-        socialLinksHeading="Follow Us"
-        heroSocialLinks={heroSocialLinks}
         bgImageUrl="/images/hero_bg.jpeg"
       />
       {/* End Hero Section */}
@@ -97,8 +105,8 @@ export default function Home() {
       <div className="container">
         <FunFact
           variant="cs-type1"
-          title="A Brilliant Web Developer"
-          subtitle="As a creative and passionate designer and developer, I can deliver something truly unique and dynamique. Let's collaborate and create something great."
+          title="Proven Results"
+          subtitle="We merge creative innovation with technical mastery to build captivating digital experiences that convert. Our track record speaks for itself."
           data={funfaceData}
         />
       </div>
@@ -111,55 +119,87 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Services we can help you with"
-                subtitle="Our Services"
-                btnText="See All Services"
+                title="Our Expertise, Your Advantage"
+                subtitle="Core Services"
+                btnText="Explore All Services"
                 btnLink="/service"
               />
               <Spacing lg="90" md="45" />
             </Div>
             <Div className="col-xl-8">
               <Div className="row">
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
+                  <Spacing lg="0" md="30" />
                   <Card
-                    title="Website Design & Develop"
+                    title="Bespoke Web Development"
                     link="/service/service-details"
                     src="/images/service_1.jpeg"
-                    alt="Service"
+                    alt="Bespoke Web Development"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="eCommerce"
+                    title="UI/UX Design"
                     link="/service/service-details"
                     src="/images/service_2.jpeg"
-                    alt="Service"
+                    alt="UI/UX Design"
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
                 <Div className="col-lg-3 col-sm-6">
+                  <Spacing lg="0" md="30" />
                   <Card
-                    title="Digital Analytics"
+                    title="eCommerce Solutions"
                     link="/service/service-details"
                     src="/images/service_3.jpeg"
-                    alt="Service"
+                    alt="eCommerce Solutions"
                   />
-                  <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
                 <Div className="col-lg-3 col-sm-6">
                   <Card
-                    title="Web Hosting"
+                    title="SEO & Digital Strategy"
                     link="/service/service-details"
                     src="/images/service_4.jpeg"
-                    alt="Service"
+                    alt="SEO & Digital Strategy"
                   />
                   <Spacing lg="0" md="30" />
                 </Div>
-                <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Spacing lg="0" md="30" />
+                  <Card
+                    title="Cloud & DevOps"
+                    link="/service/service-details"
+                    src="/images/service_5.jpeg"
+                    alt="Cloud & DevOps"
+                  />
+                </Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="Mobile App Development"
+                    link="/service/service-details"
+                    src="/images/service_6.jpeg"
+                    alt="Mobile App Development"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Spacing lg="0" md="30" />
+                  <Card
+                    title="AI Integration"
+                    link="/service/service-details"
+                    src="/images/service_7.jpeg"
+                    alt="AI Integration"
+                  />
+                </Div>
+                <Div className="col-lg-3 col-sm-6">
+                  <Card
+                    title="Ongoing Support"
+                    link="/service/service-details"
+                    src="/images/offer.jpeg"
+                    alt="Ongoing Support"
+                  />
+                  <Spacing lg="0" md="30" />
+                </Div>
               </Div>
             </Div>
           </Div>
@@ -172,8 +212,8 @@ export default function Home() {
       <Div>
         <Div className="container">
           <SectionHeading
-            title="Our Works"
-            subtitle="Latest Projects"
+            title="Featured Projects"
+            subtitle="Our Work"
             variant="cs-style1 text-center"
           />
           <Spacing lg="90" md="45" />
@@ -182,7 +222,7 @@ export default function Home() {
       </Div>
       {/* End Portfolio Section */}
 
-      {/* Start Awards Section */}
+      {/* Start Why Choose Us Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_2">
         <Div className="cs-shape_2">
@@ -192,8 +232,8 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="We get multiple awards"
-                subtitle="Testimonials"
+                title="Why Partner with Remlyx?"
+                subtitle="Our Process"
                 variant="cs-style1"
               />
               <Spacing lg="90" md="45" />
@@ -204,18 +244,18 @@ export default function Home() {
           </Div>
         </Div>
       </Div>
-      {/* End Awards Section */}
+      {/* End Why Choose Us Section */}
 
       {/* Start Video Block Section */}
       <Spacing lg="130" md="70" />
       <Div className="container">
         <h2 className="cs-font_50 cs-m0 text-center cs-line_height_4">
-          Design is not just what it looks like and feels like. Design is how it
-          works.
+          Discover How We Transform Businesses. <br />
+          Watch Our Story.
         </h2>
         <Spacing lg="70" md="70" />
         <VideoModal
-          videoSrc="https://www.youtube.com/watch?v=VcaAVWtP48A"
+          videoSrc="https://www.youtube.com/watch?v=GQyWIur03aw"
           bgUrl="/images/video_bg.jpeg"
         />
       </Div>
@@ -225,7 +265,7 @@ export default function Home() {
       <Spacing lg="145" md="80" />
       <Div className="container">
         <SectionHeading
-          title="Awesome team <br/>members"
+          title="The Experts Behind Our Success"
           subtitle="Our Team"
           variant="cs-style1"
         />
@@ -236,6 +276,14 @@ export default function Home() {
       {/* End Team Section */}
 
       {/* Start Testimonial Section */}
+      <Div className="container">
+        <SectionHeading
+          title="What Our Clients Say"
+          subtitle="Testimonials"
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="90" md="45" />
+      </Div>
       <TestimonialSlider />
       {/* End Testimonial Section */}
 
@@ -248,9 +296,9 @@ export default function Home() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title="Explore recent publication"
-                subtitle="Our News"
-                btnText="View More Blog"
+                title="Our Insights & News"
+                subtitle="Blog"
+                btnText="View More"
                 btnLink="/blog"
               />
               <Spacing lg="90" md="45" />
@@ -266,7 +314,7 @@ export default function Home() {
       {/* End Blog Section */}
 
       {/* Start MovingText Section */}
-      <Spacing lg="125" md="70" />
+      <Spacing lg="130" md="70" />
       <MovingText text="Our reputed world wide partners" />
       <Spacing lg="105" md="70" />
       {/* End MovingText Section */}
@@ -281,8 +329,8 @@ export default function Home() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let's disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Ready to Start Your Project?"
+          btnText="Get a Free Quote"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

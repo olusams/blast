@@ -5,6 +5,7 @@ import RecentPost from '../Widget/RecentPost'
 import SearchWidget from '../Widget/SearchWidget'
 import SideMenuWidget from '../Widget/SideMenuWidget'
 import TagWidget from '../Widget/TagWidget'
+import Spacing from '../Spacing'
 
 export default function Sidebar() {
   const tagData = [
@@ -110,11 +111,13 @@ export default function Sidebar() {
   return (
     <>
       <Div className="cs-sidebar_item">
-        <AuthorWidget 
-          src='/images/avatar_1.png'
-          name='Kuber Jontra' 
-          description='At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.'
+        <AuthorWidget
+          src="/images/about_img_4.jpeg"
+          name="remlyx"
+          description="We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things."
         />
+        <Spacing lg="50" md="30" />
+        <h2 className="cs-widget_title">Categories</h2>
       </Div>
       <Div className="cs-sidebar_item">
         <SearchWidget title='Search'/>

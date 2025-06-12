@@ -1,3 +1,5 @@
+@use '../default/variable' as *;
+
 .cs-pd_video .cs-video_open,
 .cs-sample_img .cs-video_open {
   position: absolute;
@@ -175,6 +177,10 @@
 
 .cs-video_popup_align {
   overflow: hidden;
+}
+
+.cs-video_popup.cs-style1 {
+  height: 90px;
 }
 
 /*End Video Popup*/

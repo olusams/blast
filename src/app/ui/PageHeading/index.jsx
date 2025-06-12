@@ -1,12 +1,17 @@
+'use client';
 import React from 'react';
 import Link from "next/link";;
 import Div from '../Div';
+import { useDynamicBg } from '../../context/DynamicBgContext';
 
 export default function PageHeading({ title, bgSrc, pageLinkText }) {
+  const { heroImage } = useDynamicBg();
+  const finalBgSrc = heroImage || bgSrc;
+
   return (
     <Div
       className="cs-page_heading cs-style1 cs-center text-center cs-bg"
-      style={{ backgroundImage: `url(${bgSrc})` }}
+      style={{ backgroundImage: `url(${finalBgSrc})` }}
     >
       <Div className="container">
         <Div className="cs-page_heading_in">

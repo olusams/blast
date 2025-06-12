@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "imgUrl": "/images/remlyx/driving-school.jpg",
+    "title": "Driving School Project",
+    "subtitle": "Branding",
+    "gallery": [
+      { "url": "/images/remlyx/driving-school.jpg" }
+    ],
+    "description": "A comprehensive branding project for a modern driving school.",
+    "category": "Branding",
+    "location": "Leeds",
+    "software": "Adobe Suite",
+    "dated": "2023-10-27",
+    "client": "Drive Right"
+  },
+  {
+    "id": 2,
+    "imgUrl": "/images/remlyx/nursery-school.jpg",
+    "title": "Nursery School Project",
+    "subtitle": "Design",
+    "gallery": [
+      { "url": "/images/remlyx/nursery-school.jpg" }
+    ],
+    "description": "A cheerful and engaging website design for a nursery school.",
+    "category": "Design",
+    "location": "Manchester",
+    "software": "Figma",
+    "dated": "2023-11-15",
+    "client": "Little Sprouts"
+  },
+  {
+    "id": 3,
+    "imgUrl": "/images/remlyx/barbers-shop.jpg",
+    "title": "Barbers shop Project",
+    "subtitle": "Photo",
+    "gallery": [
+      { "url": "/images/remlyx/barbers-shop.jpg" }
+    ],
+    "description": "High-quality photography for a stylish barber shop.",
+    "category": "Photo",
+    "location": "London",
+    "software": "Lightroom",
+    "dated": "2024-01-20",
+    "client": "The Dapper Gent"
+  },
+  {
+    "id": 4,
+    "imgUrl": "/images/remlyx/gest-logistics.jpg",
+    "title": "Gest Logistics Project",
+    "subtitle": "Branding",
+    "gallery": [
+      { "url": "/images/remlyx/gest-logistics.jpg" }
+    ],
+    "description": "A complete branding and identity for a logistics company.",
+    "category": "Branding",
+    "location": "Birmingham",
+    "software": "Adobe Illustrator",
+    "dated": "2024-02-10",
+    "client": "Gest Logistics"
+  },
+  {
+    "id": 5,
+    "imgUrl": "/images/remlyx/custom-bracelets.jpg",
+    "title": "Custom Bracelets",
+    "subtitle": "Design",
+    "gallery": [
+      { "url": "/images/remlyx/custom-bracelets.jpg" }
+    ],
+    "description": "E-commerce website design for a custom bracelet shop.",
+    "category": "Design",
+    "location": "Online",
+    "software": "Shopify, Figma",
+    "dated": "2024-03-05",
+    "client": "Glimmer"
+  },
+  {
+    "id": 6,
+    "imgUrl": "/images/remlyx/skyline-travel.jpg",
+    "title": "Skyline Travel Project",
+    "subtitle": "Photo",
+    "gallery": [
+      { "url": "/images/remlyx/skyline-travel.jpg" }
+    ],
+    "description": "A travel photography project showcasing stunning city skylines.",
+    "category": "Photo",
+    "location": "Various",
+    "software": "Photoshop",
+    "dated": "2024-04-12",
+    "client": "Skyline Travel"
+  }
+] 

@@ -1,33 +1,57 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import Div from '../Div';
+
 const accordionData = [
   {
-    question: 'Do you design illustration website?',
-    answer:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+    title: 'What is the process for bespoke web development?',
+    content: 'Our process begins with a deep dive into your business goals. We then move to wireframing, UI/UX design, development, and rigorous testing to ensure a flawless final product.',
   },
   {
-    question: 'Do you provide design source file after finish work?',
-    answer:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+    title: 'How do you approach UI/UX design?',
+    content: 'We focus on creating intuitive, user-centric designs that are both beautiful and functional. Our design process is collaborative and iterative, ensuring the final product aligns perfectly with your brand and user needs.',
   },
   {
-    question: 'How to provide project details and payments?',
-    answer:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+    title: 'What is your expertise in eCommerce solutions?',
+    content: 'We build robust, scalable, and secure eCommerce platforms that drive sales and provide a seamless customer experience. We have experience with a variety of platforms and can help you choose the best one for your business.',
   },
   {
-    question: 'Can you tell me please how to contact for project?',
-    answer:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+    title: 'How do you handle SEO and digital strategy?',
+    content: 'Our SEO strategies are data-driven and tailored to your specific business goals. We focus on on-page, off-page, and technical SEO to improve your search engine rankings and drive organic traffic.',
   },
   {
-    question: 'Do you makes custom logo, icon etc?',
-    answer:
-      'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesent voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui.',
+    title: 'Do you provide ongoing support and maintenance?',
+    content: 'Yes, we offer a range of support and maintenance packages to ensure your website or application remains secure, up-to-date, and performing at its best.',
   },
 ];
+
+const AccordionItem = ({ title, content, isOpen, onClick }) => {
+  return (
+    <Div
+      className={`cs-accordian ${isOpen ? 'active' : ''}`}
+    >
+      <Div
+        className="cs-accordian_head"
+        onClick={onClick}
+      >
+        <h2 className="cs-accordian_title">{title}</h2>
+        <span className="cs-accordian_toggle cs-accent_color">
+          <svg
+            width={15}
+            height={8}
+            viewBox="0 0 15 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0L7.5 7.5L15 0H0Z" fill="currentColor" />
+          </svg>
+        </span>
+      </Div>
+      <Div className="cs-accordian_body">
+        <Div className="cs-accordian_body_in">{content}</Div>
+      </Div>
+    </Div>
+  );
+};
 
 export default function Accordion() {
   const [selected, setSelected] = useState(0);
@@ -41,31 +65,13 @@ export default function Accordion() {
   return (
     <Div className="cs-accordians cs-style1">
       {accordionData.map((item, index) => (
-        <Div
-          className={`cs-accordian ${selected === index ? 'active' : ''}`}
+        <AccordionItem
           key={index}
-        >
-          <Div
-            className="cs-accordian_head"
-            onClick={() => handelToggle(index)}
-          >
-            <h2 className="cs-accordian_title">{item.question}</h2>
-            <span className="cs-accordian_toggle cs-accent_color">
-              <svg
-                width={15}
-                height={8}
-                viewBox="0 0 15 8"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path d="M0 0L7.5 7.5L15 0H0Z" fill="currentColor" />
-              </svg>
-            </span>
-          </Div>
-          <Div className="cs-accordian_body">
-            <Div className="cs-accordian_body_in">{item.answer}</Div>
-          </Div>
-        </Div>
+          title={item.title}
+          content={item.content}
+          isOpen={selected === index}
+          onClick={() => handelToggle(index)}
+        />
       ))}
     </Div>
   );

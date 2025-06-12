@@ -1,0 +1,22 @@
+@use '../default/variable' as *;
+
+.cs-btn.cs-style1 {
+    display: inline-block;
+    padding: 16px 35px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background-color: $accent;
+    color: $white;
+    border: 1px solid $accent;
+
+    &:hover {
+        background-color: transparent;
+        color: $accent;
+    }
+}
+
+.cs-btn.cs-style1.cs-btn_lg {
+    padding: 20px 45px;
+    font-size: 18px;
+} 

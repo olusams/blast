@@ -10,82 +10,42 @@ export default function PricingTableList() {
     <Section className="position-relative">
       <ul className="cs-tab_links cs-style1 cs-mp0 cs-primary_font">
         <li className={tab === 'monthly' ? "active" : ""} onClick={()=>setTab('monthly')}>Monthly</li>
-        <li className={tab === 'yearly' ? "active" : ""} onClick={()=>setTab('yearly')}>Yearly</li>
       </ul>
       <Section className="row">
         <Section className="col-lg-4">
-          {tab==='monthly' && (
-            <PricingTable 
-              title='Standard'
-              price='29'
-              currency='$'
-              timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Standard'
-              price='59'
-              currency='$'
-              timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
+          <PricingTable 
+            title='Standard'
+            price='350'
+            currency='£'
+            timeline='From'
+            features={['Bespoke Responsive Website', 'Advanced SEO Foundations', 'Keyword Research', 'Social Media Integration', 'eCommerce Ready', 'Google Analytics Setup']}
+            btnText='Select Plan'
+            btnLink='/'
+          />
           <Spacing lg='25' md='25'/>
         </Section>
         <Section className="col-lg-4">
-         {tab==='monthly' && (
-            <PricingTable 
-              title='Professional'
-              price='199'
-              currency='$'
-              timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Professional'
-              price='399'
-              currency='$'
-              timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
+          <PricingTable 
+            title='Professional'
+            price='750'
+            currency='£'
+            timeline='monthly'
+            features={['Everything in Standard', 'Advanced UI/UX Design', 'Content Management System', 'Targeted Facebook Campaign', 'Full eCommerce Solution', 'Google Ads Campaign']}
+            btnText='Select Plan'
+            btnLink='/'
+          />
           <Spacing lg='25' md='25'/>
         </Section>
         <Section className="col-lg-4">
-          {tab==='monthly' && (
-            <PricingTable 
-              title='Ultimate'
-              price='299'
-              currency='$'
-              timeline='monthly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
-          {tab==='yearly' && (
-            <PricingTable 
-              title='Ultimate'
-              price='599'
-              currency='$'
-              timeline='yearly'
-              features={['Static responsive website', 'Video marketing', 'Keywords research', 'Facebook campaign', 'eCommerce solution', 'Google adword']}
-              btnText='Purchase Now'
-              btnLink='/'
-            />
-          )}
+          <PricingTable 
+            title='Ultimate'
+            price='1500'
+            currency='£'
+            timeline='monthly'
+            features={['Everything in Professional', 'Advanced Animations', 'Comprehensive Digital Strategy', 'Ongoing SEO & Content Marketing', 'Priority Support', 'Monthly Performance Reports']}
+            btnText='Select Plan'
+            btnLink='/'
+          />
           <Spacing lg='25' md='25'/>
         </Section>
       </Section>

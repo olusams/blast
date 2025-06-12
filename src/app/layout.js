@@ -1,9 +1,9 @@
-"use client";
-import Header from "@/app/ui/Header";
-import CustomCursor from "@/app/ui/CustomCursor";
-import Footer from "@/app/ui/Footer";
+import { DM_Sans, Inter } from 'next/font/google';
+import AppWrapper from './components/AppWrapper';
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import "./scss/index.scss";
 import { Poppins, Open_Sans } from "next/font/google";
 
@@ -18,19 +18,80 @@ const openSans = Open_Sans({
   variable: "--secondary-font",
 });
 
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--primary-font',
+  weight: ['400', '500', '600', '700'],
+});
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--secondary-font',
+  weight: ['400', '500', '700'],
+});
+
+export const metadata = {
+  metadataBase: new URL("https://www.remlyx.com"),
+  title: {
+    default: "Remlyx | High-Impact Web Development Agency in Leeds",
+    template: "%s | Remlyx",
+  },
+  description:
+    "Remlyx is a premier web development agency in Leeds, UK, engineering high-impact digital solutions that accelerate growth. We specialize in creating powerful, sleek, and intelligent websites and applications that deliver measurable results and enhance user engagement. Contact us today for a strategic consultation.",
+  keywords: [
+    "High-Impact Web Development",
+    "Web Design Leeds",
+    "Leeds Web Development",
+    "UK Web Agency",
+    "Next.js Development",
+    "React Development",
+    "SEO Services",
+    "Digital Agency Leeds",
+    "E-commerce Solutions",
+    "Bespoke Websites",
+    "UI/UX Design",
+    "Digital Growth",
+    "Web Application Development"
+  ],
+  author: "Remlyx",
+  openGraph: {
+    title: "Remlyx | High-Impact Web Development Agency in Leeds",
+    description:
+      "We engineer powerful, sleek, and intelligent digital solutions that accelerate growth. Based in Leeds, UK.",
+    url: "https://www.remlyx.com",
+    siteName: "Remlyx",
+    locale: "en_GB",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Remlyx | High-Impact Web Development Agency in Leeds",
+    description:
+      "We engineer powerful, sleek, and intelligent digital solutions that accelerate growth. Based in Leeds, UK.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: "/images/favicon.png",
+    shortcut: "/images/favicon.png",
+    apple: "/images/favicon.png",
+  },
+};
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <meta name="author" content="Laralink" />
-        <link rel="icon" href="/images/favicon.ico" sizes="any" />
-        <title>Arino Creative Agency Next JS Template</title>
-      </head>
-      <body className={`${openSans.variable} ${poppins.variable}`}>
-        <Header />
-        <CustomCursor />
-        {children}
-        <Footer />
+      <body className={`cs-dark ${inter.variable} ${dmSans.variable}`}>
+        <AppWrapper>{children}</AppWrapper>
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+@use '../default/variable' as *;
+
 .cs-hero_social_wrap {
   display: flex;
   position: absolute;
@@ -77,14 +79,16 @@
     font-weight: 700;
     margin-bottom: 60px;
     line-height: 1.25em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     span {
       color: $accent;
     }
   }
   .cs-hero_subtitle {
-    font-size: 18px;
-    line-height: 1.9em;
+    font-size: 20px;
+    line-height: 1.8em;
     color: $primary;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
   }
   .cs-hero_info {
     display: flex;

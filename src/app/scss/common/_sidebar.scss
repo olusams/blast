@@ -1,3 +1,5 @@
+@use '../default/variable' as *;
+
 .cs-sidebar_item {
   &:not(:last-child) {
     margin-bottom: 70px;

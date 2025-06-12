@@ -1,3 +1,28 @@
+@use '../default/variable' as *;
+
+.cs-fooer {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1536440136628-849c177E76a1');
+  background-size: cover;
+  background-position: center;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(180deg, rgba(8, 15, 26, 0.8) 0%, rgba(2, 5, 9, 0.9) 100%);
+    z-index: 1;
+  }
+  
+  > * {
+    position: relative;
+    z-index: 2;
+  }
+}
+
 .cs-fooer_main {
   padding: 95px 0 35px;
 }

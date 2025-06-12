@@ -1,4 +1,6 @@
 'use client'
+import { useEffect } from 'react';
+import { useDynamicBg } from '../context/DynamicBgContext';
 import Card from "../ui/Card";
 import Cta from "@/app/ui/Cta";
 import Div from "@/app/ui/Div";
@@ -9,11 +11,21 @@ import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 
 export default function ServicesPage() {
+  const { setBackground, setHeroImage } = useDynamicBg();
+
+  useEffect(() => {
+    setBackground('/images/cta_bg.jpeg');
+    setHeroImage('/images/service_hero_bg.jpeg');
+    return () => {
+      setBackground('');
+      setHeroImage('');
+    }
+  }, [setBackground, setHeroImage]);
+
   return (
     <>
       <PageHeading 
         title='Services'
-        bgSrc='/images/service_hero_bg.jpeg'
         pageLinkText='Services'
       />
       <Spacing lg='150' md='80'/>
@@ -24,7 +36,7 @@ export default function ServicesPage() {
           <Div className="row">
             <Div className="col-xl-4">
               <SectionHeading
-                title='Services we can help you with' 
+                title='Strategic Solutions to Elevate Your Business' 
                 subtitle='What Can We Do'
               />
               <Spacing lg='90' md='45'/>
@@ -99,7 +111,7 @@ export default function ServicesPage() {
       <Spacing lg='150' md='80'/>
       <Div className="container">
         <SectionHeading
-          title='Providing best <br/>pricing for client' 
+          title='Transparent Pricing for Exceptional Value' 
           subtitle='Pricing & Packaging'
         />
         <Spacing lg='85' md='40'/>
@@ -110,7 +122,7 @@ export default function ServicesPage() {
       <Spacing lg='150' md='80'/>
       <Div className="container">
         <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
+          title="Let's Build Something Remarkable Together"
           btnText='Apply For Meeting' 
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'

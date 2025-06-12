@@ -1,3 +1,5 @@
+@use '../default/variable' as *;
+
 .cs-site_header {
   position: relative;
   z-index: 101;
@@ -298,7 +300,7 @@
 //   opacity: 1;
 // }
 
-.cs-site_branding {
+.cs-site-branding {
   display: inline-block;
   img {
     max-height: 45px;

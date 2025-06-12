@@ -1,6 +1,9 @@
+@use '../default/variable' as *;
+
 .cs-cta.cs-style1 {
   padding: 90px 30px;
   border-radius: 15px;
+  background-color: #161616;
   .cs-cta_in {
     position: relative;
     z-index: 2;

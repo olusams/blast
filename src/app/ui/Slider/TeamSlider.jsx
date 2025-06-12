@@ -6,8 +6,8 @@ import Team from '../Team';
 const teamData = [
   {
     memberImage: '/images/member_1.jpeg',
-    memberName: 'Melon Bulgery',
-    memberDesignation: 'Product Designer',
+    memberName: 'Rebeca Turner',
+    memberDesignation: 'Founder & CEO',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -17,8 +17,8 @@ const teamData = [
   },
   {
     memberImage: '/images/member_2.jpeg',
-    memberName: 'Olinaz Fushi',
-    memberDesignation: 'Product Designer',
+    memberName: 'David Johnson',
+    memberDesignation: 'Lead UI/UX Designer',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -28,8 +28,8 @@ const teamData = [
   },
   {
     memberImage: '/images/member_3.jpeg',
-    memberName: 'David Elone',
-    memberDesignation: 'React Developer',
+    memberName: 'Olivia Smith',
+    memberDesignation: 'Senior Full-Stack Developer',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -39,8 +39,8 @@ const teamData = [
   },
   {
     memberImage: '/images/member_4.jpeg',
-    memberName: 'Melina Opole',
-    memberDesignation: 'WP Developer',
+    memberName: 'Louis Pete',
+    memberDesignation: 'Digital Marketing Lead',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
@@ -50,8 +50,8 @@ const teamData = [
   },
   {
     memberImage: '/images/member_1.jpeg',
-    memberName: 'Melon Bulgery',
-    memberDesignation: 'Product Designer',
+    memberName: 'Michael Miller',
+    memberDesignation: 'DevOps Engineer',
     memberSocial: {
       linkedin: '/',
       twitter: '/',
