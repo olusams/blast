@@ -1,5 +1,5 @@
 import React from 'react'
-import Div from '../Div'
+import Div from '@/app/ui/Div'
 
 export default function TextWidget({logoSrc, logoAlt, text}) {
   return (

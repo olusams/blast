@@ -2,7 +2,7 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import Slider from 'react-slick';
 import Div from '../Div';
-import Team from '../Team';
+import Team from '../Team/index.jsx';
 const teamData = [
   {
     memberImage: '/images/member_1.jpeg',

@@ -1,10 +1,10 @@
 'use client';
 import { useEffect, useState } from 'react';
-import Div from '../Div';
+import Div from '@/app/ui/Div';
 import Link from 'next/link';
-import ContactInfoWidget from '../Widget/ContactInfoWidget';
-import Newsletter from '../Widget/Newsletter';
-import SocialWidget from '../Widget/SocialWidget';
+import ContactInfoWidget from '@/app/ui/Widget/ContactInfoWidget';
+import Newsletter from '@/app/ui/Widget/Newsletter';
+import SocialWidget from '@/app/ui/Widget/SocialWidget';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);

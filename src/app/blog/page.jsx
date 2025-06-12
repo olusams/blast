@@ -13,31 +13,31 @@ import Spacing from "@/app/ui/Spacing";
 const postData = [
   {
     thumb: '/images/post_4.jpeg',
-    title: 'A.I will take all human job within next year',
+    title: 'Digital Transformation: The Key to Business Growth in 2024',
     subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '07 Mar 2022',
-    category: 'Tech',
+      'In today\'s rapidly evolving digital landscape, businesses must adapt to stay competitive. This article explores how digital transformation strategies can drive growth, improve efficiency, and create new opportunities. Learn how Remlyx helps businesses leverage technology to achieve their goals and maintain a competitive edge in their industry.',
+    date: 'March 7, 2024',
+    category: 'Digital Strategy',
     categoryHref: '/blog',
     href: '/blog/blog-details',
   },
   {
     thumb: '/images/post_5.jpeg',
-    title: 'Creative studio programm coming soon',
+    title: 'Bespoke Web Development: Creating Custom Solutions for Your Business',
     subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '05 Mar 2022',
-    category: 'Photography',
+      'Every business has unique needs and challenges. Our bespoke web development approach ensures that your digital solution is tailored to your specific requirements. Discover how Remlyx combines technical expertise with creative innovation to build powerful, scalable, and user-friendly web applications that drive results.',
+    date: 'March 5, 2024',
+    category: 'Web Development',
     categoryHref: '/blog',
     href: '/blog/blog-details',
   },
   {
     thumb: '/images/post_6.jpeg',
-    title: 'Artistic mind will be great for creation',
+    title: 'The Impact of AI on Modern Business Operations',
     subtitle:
-      'Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Tortor posuere ac ut consequat semper viverra nam libero justo. Mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Aliquam purus sit amet luctus venenatis lectus magna fringilla urna. Purus sit amet luctus venenatis lectus. Nunc aliquet bibendum enim facilisis. Pretium viverra suspendisse potenti nullam ac tortor vitae.',
-    date: '04 Mar 2022',
-    category: 'Tech',
+      'Artificial Intelligence is revolutionizing how businesses operate and compete. From automating routine tasks to providing deep insights through data analysis, AI is becoming an essential tool for growth. Learn how Remlyx helps businesses integrate AI solutions to enhance efficiency, improve decision-making, and create new opportunities.',
+    date: 'March 4, 2024',
+    category: 'Technology',
     categoryHref: '/blog',
     href: '/blog/blog-details',
   },
@@ -58,7 +58,7 @@ export default function BlogPage() {
   return (
     <>
       <PageHeading
-        title="Our Blog"
+        title="Digital Insights & Industry Trends"
         pageLinkText="Blog"
       />
       <Spacing lg="150" md="80" />
@@ -91,8 +91,8 @@ export default function BlogPage() {
       <Spacing lg="150" md="80" />
       <Div className="container">
         <Cta
-          title="Let's disscuse make <br />something <i>cool</i> together"
-          btnText="Apply For Meeting"
+          title="Ready to Transform Your Business <br />With <i>Digital Solutions</i>?"
+          btnText="Start Your Project"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"
         />

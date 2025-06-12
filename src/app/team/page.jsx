@@ -4,7 +4,7 @@ import Div from "@/app/ui/Div";
 import PageHeading from "@/app/ui/PageHeading";
 import SectionHeading from "@/app/ui/SectionHeading";
 import Spacing from "@/app/ui/Spacing";
-import Team from "@/app/ui/Team";
+import Team from '@/app/ui/Team/index.jsx';
 
 const teamData = [
   {
@@ -129,7 +129,7 @@ export default function TeamPage() {
         <Spacing lg="70" md="50" />
         <Div className="container">
           <Cta
-            title="Let’s disscuse make <br />something <i>cool</i> together"
+            title="Let's disscuse make <br />something <i>cool</i> together"
             btnText="Apply For Meeting"
             btnLink="/contact"
             bgSrc="/images/cta_bg.jpeg"

@@ -1,10 +1,10 @@
 import React from 'react';
-import Div from '../Div';
-import ContactInfoWidget from '../Widget/ContactInfoWidget';
-import MenuWidget from '../Widget/MenuWidget';
-import Newsletter from '../Widget/Newsletter';
-import SocialWidget from '../Widget/SocialWidget';
-import TextWidget from '../Widget/TextWidget';
+import Div from '@/app/ui/Div';
+import ContactInfoWidget from '@/app/ui/Widget/ContactInfoWidget';
+import MenuWidget from '@/app/ui/Widget/MenuWidget';
+import Newsletter from '@/app/ui/Widget/Newsletter';
+import SocialWidget from '@/app/ui/Widget/SocialWidget';
+import TextWidget from '@/app/ui/Widget/TextWidget';
 
 const copyrightLinks = [
   {

@@ -1,7 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-export default function Div(props) {
+const Div = (props) => {
   return (
     <div {...props}>{props.children}</div>
-  )
-}
+  );
+};
+
+export default Div;

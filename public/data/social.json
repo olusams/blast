@@ -1,22 +1,18 @@
 [
   {
-    "icon": "fa6-brands:facebook-f",
-    "url": "https://facebook.com/"
+    "icon": "fa-brands:facebook-f",
+    "url": "https://facebook.com"
   },
   {
-    "icon": "fa6-brands:instagram",
-    "url": "https://instagram.com/"
+    "icon": "fa-brands:twitter",
+    "url": "https://twitter.com"
   },
   {
-    "icon": "fa6-brands:linkedin-in",
-    "url": "https://linkedin.com/"
+    "icon": "fa-brands:linkedin-in",
+    "url": "https://linkedin.com"
   },
   {
-    "icon": "fa6-brands:pinterest",
-    "url": "https://pinterest.com/"
-  },
-  {
-    "icon": "fa6-brands:tiktok",
-    "url": "https://tiktok.com/"
+    "icon": "fa-brands:instagram",
+    "url": "https://instagram.com"
   }
 ] 

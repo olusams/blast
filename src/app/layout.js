@@ -1,5 +1,5 @@
 import { DM_Sans, Inter } from 'next/font/google';
-import AppWrapper from './components/AppWrapper';
+import AppWrapper from '@/app/components/AppWrapper';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";

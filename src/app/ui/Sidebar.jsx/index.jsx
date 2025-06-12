@@ -10,102 +10,102 @@ import Spacing from '../Spacing'
 export default function Sidebar() {
   const tagData = [
     {
-      title: 'Business',
-      url:'/'
+      title: 'Web Development',
+      url:'/blog?tag=web-development'
     },
     {
-      title: 'Agency',
-      url:'/'
+      title: 'Digital Strategy',
+      url:'/blog?tag=digital-strategy'
     },
     {
-      title: 'Artwork',
-      url:'/'
+      title: 'UI/UX Design',
+      url:'/blog?tag=ui-ux-design'
     },
     {
-      title: 'Marketing',
-      url:'/'
+      title: 'eCommerce',
+      url:'/blog?tag=ecommerce'
     },
     {
-      title: 'Information',
-      url:'/'
+      title: 'Business Growth',
+      url:'/blog?tag=business-growth'
     },
     {
-      title: 'Design',
-      url:'/'
+      title: 'Technology',
+      url:'/blog?tag=technology'
     },
     {
-      title: 'Wordpress',
-      url:'/'
+      title: 'Digital Marketing',
+      url:'/blog?tag=digital-marketing'
     },
   ]
   const archiveData = [
     {
       title: 'Archives',
-      url:'/'
+      url:'/blog'
     },
     {
-      title: '15 Aug 2022',
-      url:'/'
+      title: 'March 2024',
+      url:'/blog?month=2024-03'
     },
     {
-      title: '20 Sep 2021',
-      url:'/'
+      title: 'February 2024',
+      url:'/blog?month=2024-02'
     },
     {
-      title: '11 Dec 2020',
-      url:'/'
+      title: 'January 2024',
+      url:'/blog?month=2024-01'
     },
     {
-      title: '25 jun 2020',
-      url:'/'
+      title: 'December 2023',
+      url:'/blog?month=2023-12'
     }
   ]
   const categoryData = [
     {
-      title: 'Corporate',
-      url:'/'
+      title: 'Web Development',
+      url:'/blog?category=web-development'
     },
     {
-      title: 'Company',
-      url:'/'
+      title: 'Digital Strategy',
+      url:'/blog?category=digital-strategy'
     },
     {
-      title: 'Search Engine',
-      url:'/'
+      title: 'UI/UX Design',
+      url:'/blog?category=ui-ux-design'
     },
     {
-      title: 'Information',
-      url:'/'
+      title: 'eCommerce',
+      url:'/blog?category=ecommerce'
     },
     {
-      title: 'Painting',
-      url:'/'
+      title: 'Business Growth',
+      url:'/blog?category=business-growth'
     }
   ]
   const recentPostData = [
     {
-      title: 'How to studio setup...',
+      title: 'Digital Transformation: The Key to Business Growth in 2024',
       thumb: '/images/recent_post_1.jpeg',
       href: '/blog/blog-details',
-      date: '15 Aug 2022'
+      date: 'March 7, 2024'
     },
     {
-      title: 'Creative people mind...',
+      title: 'Bespoke Web Development: Creating Custom Solutions for Your Business',
       thumb: '/images/recent_post_2.jpeg',
       href: '/blog/blog-details',
-      date: '14 Aug 2022'
+      date: 'March 5, 2024'
     },
     {
-      title: 'AI take over human...',
+      title: 'The Impact of AI on Modern Business Operations',
       thumb: '/images/recent_post_3.jpeg',
       href: '/blog/blog-details',
-      date: '13 Aug 2022'
+      date: 'March 4, 2024'
     },
     {
-      title: 'You should now add...',
+      title: 'Optimizing Your Digital Strategy for Maximum ROI',
       thumb: '/images/recent_post_4.jpeg',
       href: '/blog/blog-details',
-      date: '12 Aug 2022'
+      date: 'March 3, 2024'
     },
   ]
   return (
@@ -113,26 +113,26 @@ export default function Sidebar() {
       <Div className="cs-sidebar_item">
         <AuthorWidget
           src="/images/about_img_4.jpeg"
-          name="remlyx"
-          description="We are a digital agency that helps brands to achieve their business outcomes. We see technology as a tool to create amazing things."
+          name="Remlyx Digital"
+          description="Based in Leeds, we are a leading digital agency specializing in bespoke web development, UI/UX design, and digital strategy. Our team combines technical expertise with creative innovation to deliver powerful digital solutions that drive business growth and create lasting value for our clients."
         />
         <Spacing lg="50" md="30" />
         <h2 className="cs-widget_title">Categories</h2>
       </Div>
       <Div className="cs-sidebar_item">
-        <SearchWidget title='Search'/>
+        <SearchWidget title='Search Digital Insights'/>
       </Div>
       <Div className="cs-sidebar_item">
         <SideMenuWidget title='Categories' data={categoryData}/>
       </Div>
       <Div className="cs-sidebar_item">
-        <RecentPost title='Archives' data={recentPostData}/>
+        <RecentPost title='Latest Articles' data={recentPostData}/>
       </Div>
       <Div className="cs-sidebar_item">
         <SideMenuWidget title='Archives' data={archiveData}/>
       </Div>
       <Div className="cs-sidebar_item">
-        <TagWidget title='Tags' data={tagData}/>
+        <TagWidget title='Popular Topics' data={tagData}/>
       </Div>
     </>
   )

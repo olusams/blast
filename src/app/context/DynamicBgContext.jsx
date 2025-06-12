@@ -1,7 +1,8 @@
 'use client';
-import React, { createContext, useState, useContext } from 'react';
 
-const DynamicBgContext = createContext(null);
+import React, { createContext, useContext, useState } from 'react';
+
+const DynamicBgContext = createContext();
 
 export const useDynamicBg = () => {
   const context = useContext(DynamicBgContext);
@@ -12,14 +13,11 @@ export const useDynamicBg = () => {
 };
 
 export const DynamicBgProvider = ({ children }) => {
-  const [background, setBackground] = useState('/images/hero_bg.jpeg');
-  const [heroImage, setHeroImage] = useState('');
+  const [background, setBackground] = useState(null);
 
   const value = {
     background,
     setBackground,
-    heroImage,
-    setHeroImage,
   };
 
   return (

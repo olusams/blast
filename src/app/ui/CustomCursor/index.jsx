@@ -64,6 +64,7 @@ const CustomCursor = () => {
     };
     followMouse();
   }, []);
+
   return (
     <>
       <div className="cs-cursor_lg" ref={cursorLg}></div>

@@ -1,12 +1,13 @@
 'use client';
 
-import { DynamicBgProvider, useDynamicBg } from '../context/DynamicBgContext';
-import CustomCursor from '../ui/CustomCursor';
-import Div from '../ui/Div';
-import Footer from '../ui/Footer';
-import Header from '../ui/Header';
+import React from 'react';
+import { DynamicBgProvider, useDynamicBg } from '@/app/context/DynamicBgContext';
+import CustomCursor from '@/app/ui/CustomCursor';
+import Div from '@/app/ui/Div';
+import Footer from '@/app/ui/Footer';
+import Header from '@/app/ui/Header';
 
-function DynamicBackground() {
+const DynamicBackground = () => {
   const { background } = useDynamicBg();
   if (!background) return null;
 
@@ -17,10 +18,10 @@ function DynamicBackground() {
         backgroundImage: `url(${background})`
       }} 
     />
-  )
-}
+  );
+};
 
-export default function AppWrapper({ children }) {
+const AppWrapper = ({ children }) => {
   return (
     <DynamicBgProvider>
       <DynamicBackground />
@@ -30,4 +31,6 @@ export default function AppWrapper({ children }) {
       <Footer />
     </DynamicBgProvider>
   );
-} 
+};
+
+export default AppWrapper; 
