@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {},
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['@iconify/react', 'swiper', 'react-slick'],
+  },
   distDir: '.next',
   images: {
     remotePatterns: [
@@ -57,7 +60,17 @@ const nextConfig = {
         hostname: 'raw.githubusercontent.com'
       }
     ],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
+  },
+  poweredByHeader: false,
+  compress: true,
+  reactStrictMode: true,
+  swcMinify: true,
 };
 
 export default nextConfig;

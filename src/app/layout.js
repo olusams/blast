@@ -33,41 +33,50 @@ const dmSans = DM_Sans({
 export const metadata = {
   metadataBase: new URL("https://www.remlyx.com"),
   title: {
-    default: "Remlyx | High-Impact Web Development Agency in Leeds",
-    template: "%s | Remlyx",
+    default: "Remlyx | Premier Web Development Agency in Leeds, UK",
+    template: "%s | Remlyx - Leeds Web Development Agency",
   },
   description:
-    "Remlyx is a premier web development agency in Leeds, UK, engineering high-impact digital solutions that accelerate growth. We specialize in creating powerful, sleek, and intelligent websites and applications that deliver measurable results and enhance user engagement. Contact us today for a strategic consultation.",
+    "Remlyx is a premier web development agency in Leeds, UK, specializing in high-performance websites, SEO optimization, and responsive design. Based in Leeds, we deliver cutting-edge digital solutions that drive business growth. Contact us for expert web development services.",
   keywords: [
-    "High-Impact Web Development",
-    "Web Design Leeds",
-    "Leeds Web Development",
-    "UK Web Agency",
+    "Web Development Leeds",
+    "Leeds Web Agency",
+    "UK Web Development",
     "Next.js Development",
     "React Development",
-    "SEO Services",
+    "SEO Services Leeds",
     "Digital Agency Leeds",
     "E-commerce Solutions",
     "Bespoke Websites",
     "UI/UX Design",
     "Digital Growth",
-    "Web Application Development"
+    "Web Application Development",
+    "Mobile-First Design",
+    "Performance Optimization",
+    "Local SEO Leeds"
   ],
   author: "Remlyx",
   openGraph: {
-    title: "Remlyx | High-Impact Web Development Agency in Leeds",
+    title: "Remlyx | Premier Web Development Agency in Leeds, UK",
     description:
-      "We engineer powerful, sleek, and intelligent digital solutions that accelerate growth. Based in Leeds, UK.",
+      "Expert web development and digital solutions in Leeds, UK. Specializing in high-performance websites, SEO, and responsive design.",
     url: "https://www.remlyx.com",
     siteName: "Remlyx",
     locale: "en_GB",
     type: "website",
+    address: {
+      streetAddress: "Your Street Address",
+      addressLocality: "Leeds",
+      addressRegion: "West Yorkshire",
+      postalCode: "Your Postal Code",
+      addressCountry: "GB"
+    }
   },
   twitter: {
     card: "summary_large_image",
-    title: "Remlyx | High-Impact Web Development Agency in Leeds",
+    title: "Remlyx | Premier Web Development Agency in Leeds, UK",
     description:
-      "We engineer powerful, sleek, and intelligent digital solutions that accelerate growth. Based in Leeds, UK.",
+      "Expert web development and digital solutions in Leeds, UK. Specializing in high-performance websites, SEO, and responsive design.",
   },
   robots: {
     index: true,
@@ -80,11 +89,20 @@ export const metadata = {
       "max-snippet": -1,
     },
   },
+  alternates: {
+    canonical: "https://www.remlyx.com",
+  },
+  verification: {
+    google: "your-google-verification-code",
+    yandex: "your-yandex-verification-code",
+    bing: "your-bing-verification-code",
+  },
   icons: {
     icon: "/images/favicon.png",
     shortcut: "/images/favicon.png",
     apple: "/images/favicon.png",
   },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({ children }) {
