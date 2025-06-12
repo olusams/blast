@@ -1,4 +1,3 @@
-'use client'
 import { notFound } from 'next/navigation';
 import Button from "@/app/ui/Button";
 import Cta from "@/app/ui/Cta";
@@ -11,19 +10,19 @@ import portfolioData from '../../../../public/data/portfolio.json';
 
 export async function generateStaticParams() {
   return portfolioData.map(portfolio => ({
-    portfolioDetailsId: portfolio.id,
+    portfolioDetailsId: portfolio.id.toString(),
   }));
 }
 
 export default function PortfolioDetailsPage({ params }) {
   const portfolioId = params.portfolioDetailsId;
-  const portfolio = portfolioData.find(item => item.id === portfolioId);
+  const portfolio = portfolioData.find(item => item.id.toString() === portfolioId);
 
   if (!portfolio) {
     notFound();
   }
 
-  const currentIndex = portfolioData.findIndex(item => item.id === portfolioId);
+  const currentIndex = portfolioData.findIndex(item => item.id.toString() === portfolioId);
   const nextProjectId =
     currentIndex < portfolioData.length - 1
       ? portfolioData[currentIndex + 1].id
@@ -45,7 +44,7 @@ export default function PortfolioDetailsPage({ params }) {
           subtitle={portfolio.subtitle} 
         />
         <Spacing lg='40' md='20'/>
-        <Gallery gallery={portfolio.gallery} />
+        <Gallery gallery={portfolio.gallery?.map(item => item.url) || [portfolio.imgUrl]} />
         <Spacing lg='90' md='40'/>
         <Div className="row">
           <Div className="col-lg-6">

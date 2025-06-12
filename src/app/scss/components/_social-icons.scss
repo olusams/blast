@@ -1,0 +1,174 @@
+// Define brand colors for the 5 main social media platforms
+$facebook-color: #1877f2;
+$linkedin-color: #0077b5;
+$pinterest-color: #bd081c;
+$instagram-color: #e4405f;
+$tiktok-color: #000000;
+
+// Main social buttons container
+.cs-social_btns.cs-style1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -7px;
+  
+  a {
+    height: 36px;
+    width: 36px;
+    border-radius: 50%;
+    margin: 7px;
+    color: #fff;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 2px solid #fff;
+
+    &.cs-center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+// Brand-specific colors with high specificity
+.cs-social_btns.cs-style1 a,
+.cs-fooer .cs-social_btns.cs-style1 a,
+footer .cs-social_btns.cs-style1 a {
+  
+  // Facebook
+  &[href*="facebook.com"] {
+    background-color: $facebook-color !important;
+    border-color: $facebook-color !important;
+    color: #fff !important;
+    &:hover {
+      background-color: darken($facebook-color, 10%) !important;
+      border-color: darken($facebook-color, 10%) !important;
+      transform: scale(1.1) !important;
+    }
+  }
+
+  // LinkedIn
+  &[href*="linkedin.com"] {
+    background-color: $linkedin-color !important;
+    border-color: $linkedin-color !important;
+    color: #fff !important;
+    &:hover {
+      background-color: darken($linkedin-color, 10%) !important;
+      border-color: darken($linkedin-color, 10%) !important;
+      transform: scale(1.1) !important;
+    }
+  }
+
+  // Pinterest
+  &[href*="pinterest.com"] {
+    background-color: $pinterest-color !important;
+    border-color: $pinterest-color !important;
+    color: #fff !important;
+    &:hover {
+      background-color: darken($pinterest-color, 10%) !important;
+      border-color: darken($pinterest-color, 10%) !important;
+      transform: scale(1.1) !important;
+    }
+  }
+
+  // Instagram
+  &[href*="instagram.com"] {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+    border-color: $instagram-color !important;
+    color: #fff !important;
+    &:hover {
+      background: linear-gradient(45deg, darken(#f09433, 10%) 0%, darken(#e6683c, 10%) 25%, darken(#dc2743, 10%) 50%, darken(#cc2366, 10%) 75%, darken(#bc1888, 10%) 100%) !important;
+      border-color: darken($instagram-color, 10%) !important;
+      transform: scale(1.1) !important;
+    }
+  }
+
+  // TikTok
+  &[href*="tiktok.com"] {
+    background: linear-gradient(45deg, #ff0050, #00f2ea) !important;
+    border-color: $tiktok-color !important;
+    color: #fff !important;
+    &:hover {
+      background: linear-gradient(45deg, darken(#ff0050, 10%), darken(#00f2ea, 10%)) !important;
+      border-color: lighten($tiktok-color, 20%) !important;
+      transform: scale(1.1) !important;
+    }
+  }
+}
+
+// Team member social icons
+.cs-member_social {
+  a {
+    transition: all 0.4s ease;
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+
+    // Apply the same brand colors for team member social icons
+    &[href*="facebook.com"] {
+      background-color: $facebook-color !important;
+      border-color: $facebook-color !important;
+      color: #fff !important;
+      &:hover {
+        background-color: darken($facebook-color, 10%) !important;
+        border-color: darken($facebook-color, 10%) !important;
+      }
+    }
+
+    &[href*="linkedin.com"] {
+      background-color: $linkedin-color !important;
+      border-color: $linkedin-color !important;
+      color: #fff !important;
+      &:hover {
+        background-color: darken($linkedin-color, 10%) !important;
+        border-color: darken($linkedin-color, 10%) !important;
+      }
+    }
+
+    &[href*="pinterest.com"] {
+      background-color: $pinterest-color !important;
+      border-color: $pinterest-color !important;
+      color: #fff !important;
+      &:hover {
+        background-color: darken($pinterest-color, 10%) !important;
+        border-color: darken($pinterest-color, 10%) !important;
+      }
+    }
+
+    &[href*="instagram.com"] {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%) !important;
+      border-color: $instagram-color !important;
+      color: #fff !important;
+      &:hover {
+        background: linear-gradient(45deg, darken(#f09433, 10%) 0%, darken(#e6683c, 10%) 25%, darken(#dc2743, 10%) 50%, darken(#cc2366, 10%) 75%, darken(#bc1888, 10%) 100%) !important;
+        border-color: darken($instagram-color, 10%) !important;
+      }
+    }
+
+    &[href*="tiktok.com"] {
+      background: linear-gradient(45deg, #ff0050, #00f2ea) !important;
+      border-color: $tiktok-color !important;
+      color: #fff !important;
+      &:hover {
+        background: linear-gradient(45deg, darken(#ff0050, 10%), darken(#00f2ea, 10%)) !important;
+        border-color: lighten($tiktok-color, 20%) !important;
+      }
+    }
+  }
+} 

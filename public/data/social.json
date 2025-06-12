@@ -1,22 +1,22 @@
 [
   {
     "icon": "fa6-brands:facebook-f",
-    "url": "https://www.remlyx.com/facebook"
+    "url": "https://facebook.com/"
+  },
+  {
+    "icon": "fa6-brands:instagram",
+    "url": "https://instagram.com/"
   },
   {
     "icon": "fa6-brands:linkedin-in",
-    "url": "/"
+    "url": "https://linkedin.com/"
   },
   {
-    "icon": "fa6-brands:twitter",
-    "url": "/"
+    "icon": "fa6-brands:pinterest",
+    "url": "https://pinterest.com/"
   },
   {
-    "icon": "fa6-brands:youtube",
-    "url": "/"
-  },
-  {
-    "icon": "fa6-brands:slack",
-    "url": "/"
+    "icon": "fa6-brands:tiktok",
+    "url": "https://tiktok.com/"
   }
 ] 

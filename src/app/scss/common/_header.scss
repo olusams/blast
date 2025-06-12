@@ -18,6 +18,9 @@
   left: 0;
   top: 10px;
   transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 .cs-site_header.cs-style1 {
   .cs-main_header_in,

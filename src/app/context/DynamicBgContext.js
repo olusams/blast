@@ -6,7 +6,7 @@ const DynamicBgContext = createContext();
 export const useDynamicBg = () => useContext(DynamicBgContext);
 
 export const DynamicBgProvider = ({ children }) => {
-  const [background, setBackground] = useState('');
+  const [background, setBackground] = useState('/images/hero_bg.jpeg');
   const [heroImage, setHeroImage] = useState('');
 
   const value = {

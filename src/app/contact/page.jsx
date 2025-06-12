@@ -7,6 +7,7 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import Spacing from "@/app/ui/Spacing";
 import ContactInfoWidget from "@/app/ui/Widget/ContactInfoWidget";
 import { Icon } from "@iconify/react";
+import Map from '@/app/ui/Map';
 
 export default function ContactPage() {
   const { setBackground, setHeroImage } = useDynamicBg();
@@ -100,11 +101,7 @@ export default function ContactPage() {
       </Div>
       <Spacing lg="150" md="80" />
       <Div className="cs-google_map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2357.362147181518!2d-1.599183084288167!3d53.79193098007428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48795e0d16c0b39d%3A0x5a63955639b33a4!2sLS12%204DA!5e0!3m2!1sen!2suk!4v1683013893693!5m2!1sen!2suk"
-          allowFullScreen
-          title="Google Map"
-        />
+        <Map center={{ lat: 53.79193, lng: -1.59918 }} />
       </Div>
       <Spacing lg="50" md="40" />
     </>

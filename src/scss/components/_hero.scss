@@ -1,0 +1,26 @@
+.vlt-hero-title-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 400px;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+
+  .vlt-hero-title-inner {
+    color: #fff;
+    padding: 2rem;
+  }
+
+  .vlt-hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+
+  .vlt-hero-subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+  }
+} 

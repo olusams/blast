@@ -12,9 +12,9 @@ function DynamicBackground() {
 
   return (
     <Div 
-      className="cs-fixed_bg" 
+      className="cs-fixed_bg cs-dynamic_bg" 
       style={{
-        backgroundImage: `linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(${background})`
+        backgroundImage: `url(${background})`
       }} 
     />
   )

@@ -17,14 +17,14 @@ export default function Portfolio({ href, src, title, subtitle, variant }) {
           className="cs-portfolio_bg"
           width={500}
           height={500}
-          placeholder="blur"
-          blurDataURL="/images/blur.jpg"
         />
         <Div className="cs-portfolio_info">
           <Div className="cs-portfolio_info_bg cs-accent_bg" />
           <h2 className="cs-portfolio_title">{title}</h2>
           <Div className="cs-portfolio_subtitle">{subtitle}</Div>
-          <Div className="cs-portfolio_btn">View Project</Div>
+          <Link href={href} className="cs-portfolio_btn">
+            See Details
+          </Link>
         </Div>
       </>
     </Link>

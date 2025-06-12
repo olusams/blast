@@ -36,7 +36,7 @@ const funfaceData = [
   },
   {
     title: 'Growth Delivered',
-    factNumber: '3x',
+    factNumber: '33x',
     color: '#f9a825',
   },
 ];
@@ -290,7 +290,9 @@ export default function Home() {
       {/* Start Blog Section */}
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
-        <Div className="cs-shape_4"></Div>
+        <Div className="cs-shape_4">
+          <img src="/images/partner_1.svg" alt="Partner" />
+        </Div>
         <Div className="cs-shape_4"></Div>
         <Div className="container">
           <Div className="row">

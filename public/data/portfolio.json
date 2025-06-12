@@ -1,92 +1,158 @@
 [
   {
     "id": 1,
-    "imgUrl": "/images/remlyx/driving-school.jpg",
-    "title": "Driving School Project",
-    "subtitle": "Branding",
-    "gallery": [
-      { "url": "/images/remlyx/driving-school.jpg" }
-    ],
-    "description": "A comprehensive branding project for a modern driving school.",
-    "category": "Branding",
-    "location": "Leeds",
-    "software": "Adobe Suite",
-    "dated": "2023-10-27",
-    "client": "Drive Right"
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/1.jpg",
+    "title": "Tkalnia Dywanów",
+    "subtitle": "Photo",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/1.jpg"}],
+    "description": "A photography project capturing the intricate art of carpet weaving.",
+    "category": "Photo",
+    "location": "Poland",
+    "software": "Lightroom, Photoshop",
+    "dated": "2023-01-15",
+    "client": "Artisan Weavers"
   },
   {
     "id": 2,
-    "imgUrl": "/images/remlyx/nursery-school.jpg",
-    "title": "Nursery School Project",
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/2.jpg",
+    "title": "Oakfusion",
     "subtitle": "Design",
-    "gallery": [
-      { "url": "/images/remlyx/nursery-school.jpg" }
-    ],
-    "description": "A cheerful and engaging website design for a nursery school.",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/2.jpg"}],
+    "description": "A clean and modern website design for a tech company.",
     "category": "Design",
-    "location": "Manchester",
-    "software": "Figma",
-    "dated": "2023-11-15",
-    "client": "Little Sprouts"
+    "location": "USA",
+    "software": "Figma, Webflow",
+    "dated": "2023-03-22",
+    "client": "Oakfusion"
   },
   {
     "id": 3,
-    "imgUrl": "/images/remlyx/barbers-shop.jpg",
-    "title": "Barbers shop Project",
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/3.jpg",
+    "title": "Eden Hotels",
     "subtitle": "Photo",
-    "gallery": [
-      { "url": "/images/remlyx/barbers-shop.jpg" }
-    ],
-    "description": "High-quality photography for a stylish barber shop.",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/3.jpg"}],
+    "description": "A photo series documenting adventure travel and motorcycle journeys.",
     "category": "Photo",
-    "location": "London",
-    "software": "Lightroom",
-    "dated": "2024-01-20",
-    "client": "The Dapper Gent"
+    "location": "Global",
+    "software": "Capture One",
+    "dated": "2023-05-10",
+    "client": "Adventure Magazine"
   },
   {
     "id": 4,
-    "imgUrl": "/images/remlyx/gest-logistics.jpg",
-    "title": "Gest Logistics Project",
-    "subtitle": "Branding",
-    "gallery": [
-      { "url": "/images/remlyx/gest-logistics.jpg" }
-    ],
-    "description": "A complete branding and identity for a logistics company.",
-    "category": "Branding",
-    "location": "Birmingham",
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/4.jpg",
+    "title": "Tasties",
+    "subtitle": "Design",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/4.jpg"}],
+    "description": "A collection of logo designs for various brands.",
+    "category": "Design",
+    "location": "Remote",
     "software": "Adobe Illustrator",
-    "dated": "2024-02-10",
-    "client": "Gest Logistics"
+    "dated": "2023-06-01",
+    "client": "Various"
   },
   {
     "id": 5,
-    "imgUrl": "/images/remlyx/custom-bracelets.jpg",
-    "title": "Custom Bracelets",
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/5.jpg",
+    "title": "Suzzy Nursery",
     "subtitle": "Design",
-    "gallery": [
-      { "url": "/images/remlyx/custom-bracelets.jpg" }
-    ],
-    "description": "E-commerce website design for a custom bracelet shop.",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/5.jpg"}],
+    "description": "E-commerce platform design for the fashion brand Renner.",
     "category": "Design",
-    "location": "Online",
-    "software": "Shopify, Figma",
-    "dated": "2024-03-05",
-    "client": "Glimmer"
+    "location": "Brazil",
+    "software": "Sketch, Magento",
+    "dated": "2023-08-18",
+    "client": "Lojas Renner"
   },
   {
     "id": 6,
-    "imgUrl": "/images/remlyx/skyline-travel.jpg",
-    "title": "Skyline Travel Project",
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/6.jpg",
+    "title": "HDelive",
+    "subtitle": "Branding",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/6.jpg"}],
+    "description": "Complete branding identity for a modern interior design studio.",
+    "category": "Branding",
+    "location": "Warsaw",
+    "software": "Adobe Suite",
+    "dated": "2023-09-05",
+    "client": "2kul"
+  },
+  {
+    "id": 7,
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/7.jpg",
+    "title": "Gest Logistics",
     "subtitle": "Photo",
-    "gallery": [
-      { "url": "/images/remlyx/skyline-travel.jpg" }
-    ],
-    "description": "A travel photography project showcasing stunning city skylines.",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/7.jpg"}],
+    "description": "A photographic exploration of urban typography and signage.",
     "category": "Photo",
-    "location": "Various",
-    "software": "Photoshop",
-    "dated": "2024-04-12",
-    "client": "Skyline Travel"
+    "location": "Various Cities",
+    "software": "Fujifilm X-T4",
+    "dated": "2023-11-20",
+    "client": "Personal Project"
+  },
+  {
+    "id": 8,
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/8.jpg",
+    "title": "Travel skyline",
+    "subtitle": "Design",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/8.jpg"}],
+    "description": "A sleek and minimal portfolio website design for a digital designer.",
+    "category": "Design",
+    "location": "Online",
+    "software": "Webflow",
+    "dated": "2024-01-07",
+    "client": "Jane Doe"
+  },
+  {
+    "id": 9,
+    "imgUrl": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/9.jpg",
+    "title": "Eden Hotels",
+    "subtitle": "Branding",
+    "gallery": [{"url": "https://remlyx-portfolio.netlify.app/assets/img/portfolio/9.jpg"}],
+    "description": "A branding project focused on visual identity and perception.",
+    "category": "Branding",
+    "location": "Remote",
+    "software": "Illustrator, After Effects",
+    "dated": "2024-02-14",
+    "client": "Creative Co."
+  },
+  {
+    "id": 10,
+    "imgUrl": "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Helios Solar",
+    "subtitle": "Branding",
+    "gallery": [{"url": "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}],
+    "description": "A modern and serious brand identity for a renewable energy solutions provider, inspired by the concept of listening to the planet's needs.",
+    "category": "Branding",
+    "location": "Freiburg, Germany",
+    "software": "Adobe Illustrator, Figma",
+    "dated": "2024-03-10",
+    "client": "Helios Solar"
+  },
+  {
+    "id": 11,
+    "imgUrl": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Grove Community",
+    "subtitle": "Design",
+    "gallery": [{"url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}],
+    "description": "A user-focused website for a non-profit dedicated to urban farming and community gardens, designed to be clear, concise, and engaging for a diverse audience.",
+    "category": "Design",
+    "location": "Online",
+    "software": "WordPress, Figma",
+    "dated": "2024-04-22",
+    "client": "Grove Non-Profit"
+  },
+  {
+    "id": 12,
+    "imgUrl": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "title": "Stratus Architecture",
+    "subtitle": "Photo",
+    "gallery": [{"url": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}],
+    "description": "A photography project capturing the modern office environment and collaborative culture of a leading architecture firm to attract new talent.",
+    "category": "Photo",
+    "location": "London, UK",
+    "software": "Canon EOS R5",
+    "dated": "2024-05-15",
+    "client": "Stratus Architecture"
   }
 ] 

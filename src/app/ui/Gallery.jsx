@@ -1,6 +1,6 @@
-import Div from "../Div";
+import Div from "./Div";
 import Image from "next/image";
-import Spacing from "../Spacing";
+import Spacing from "./Spacing";
 
 export default function Gallery({ gallery }) {
   return (
