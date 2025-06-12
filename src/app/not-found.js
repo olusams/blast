@@ -9,13 +9,17 @@ export default function NotFound() {
       <Div className="container">
         <Div className="row">
           <Div className="col-lg-8 offset-lg-2 text-center">
-            <h1 className="cs-error_title cs-font_50 cs-white_color">404</h1>
-            <h2 className="cs-error_subtitle cs-font_30 cs-white_color">Page Not Found</h2>
-            <p className="cs-error_text cs-white_color">
+            <h1 className="cs-error_title cs-font_50 cs-white_color animate__animated animate__fadeInDown">
+              404
+            </h1>
+            <h2 className="cs-error_subtitle cs-font_30 cs-white_color animate__animated animate__fadeInUp">
+              Page Not Found
+            </h2>
+            <p className="cs-error_text cs-white_color animate__animated animate__fadeInUp animate__delay-1s">
               The page you are looking for might have been removed, had its name changed,
               or is temporarily unavailable.
             </p>
-            <Div className="cs-error_btn_group">
+            <Div className="cs-error_btn_group animate__animated animate__fadeInUp animate__delay-2s">
               <Button
                 btnLink="/"
                 btnText="Back to Home"
@@ -23,7 +27,7 @@ export default function NotFound() {
               />
               <Button
                 btnLink="/contact"
-                btnText="Contact Us"
+                btnText="Contact Support"
                 variant="cs-style1 cs-type1"
               />
             </Div>

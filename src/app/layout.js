@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "./scss/index.scss";
 import { Poppins, Open_Sans } from "next/font/google";
+import 'animate.css';
 
 const poppins = Poppins({
   subsets: ["latin"],
