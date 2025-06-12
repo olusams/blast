@@ -1,0 +1,42 @@
+@use '../default/variable' as *;
+
+.cs-error_page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.85) 100%);
+  padding: 50px 0;
+
+  .cs-error_title {
+    font-size: 120px;
+    line-height: 1;
+    margin-bottom: 20px;
+    background: linear-gradient(45deg, #ff4a17, #00d282);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(255, 74, 23, 0.3);
+  }
+
+  .cs-error_subtitle {
+    margin-bottom: 20px;
+  }
+
+  .cs-error_text {
+    margin-bottom: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .cs-error_btn_group {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    @media (max-width: 575px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+} 
