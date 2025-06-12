@@ -1,8 +1,8 @@
 import React from 'react'
 import parse from 'html-react-parser';
-import Button from '../Button'
-import Spacing from '../Spacing'
-import Div from '../Div';
+import Button from '@ui/Button'
+import Spacing from '@ui/Spacing'
+import Div from '@ui/Div';
 
 export default function SectionHeading({title, subtitle, btnLink, btnText, variant, children}) {
   return (

@@ -10,5 +10,9 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /api/
 
-# Crawl-delay for all bots
-Crawl-delay: 10 
+# Crawl-delay for specific bots
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 1 

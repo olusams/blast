@@ -1,5 +1,5 @@
 import React from 'react';
-import Div from '../Div';
+import Div from '@ui/Div';
 
 export default function MovingText({ text, variant }) {
   return (

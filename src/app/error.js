@@ -1,9 +1,9 @@
 'use client';
 import { useEffect } from 'react';
 import Link from 'next/link';
-import Div from './ui/Div';
-import Button from './ui/Button';
-import { handleError } from './utils/errorLogger';
+import Div from '@ui/Div';
+import Button from '@ui/Button';
+import { handleError } from '@utils/errorLogger';
 
 export default function Error({ error, reset }) {
   useEffect(() => {

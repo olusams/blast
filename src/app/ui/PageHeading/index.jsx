@@ -1,8 +1,8 @@
 'use client';
 import React from 'react';
 import Link from "next/link";;
-import Div from '../Div';
-import { useDynamicBg } from '../../context/DynamicBgContext';
+import Div from '@ui/Div';
+import { useDynamicBg } from '@context/DynamicBgContext';
 
 export default function PageHeading({ title, bgSrc, pageLinkText }) {
   const { heroImage } = useDynamicBg();
