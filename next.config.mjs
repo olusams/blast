@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {},
+  distDir: '.next',
   images: {
     remotePatterns: [
       {
