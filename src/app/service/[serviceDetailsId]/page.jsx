@@ -11,7 +11,21 @@ import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
 import serviceImage from '../../../../public/images/service_img_1.jpeg'
 
-export default function ServiceDetailsPage() {
+export async function generateStaticParams() {
+  // This is a placeholder. In a real application, you would fetch this
+  // data from a CMS or database.
+  const services = [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ];
+
+  return services.map((service) => ({
+    serviceDetailsId: service.id,
+  }));
+}
+
+export default function ServiceDetailsPage({ params }) {
   return (
     <>
       <PageHeading 
@@ -99,14 +113,14 @@ export default function ServiceDetailsPage() {
       <TestimonialSlider />
       <Spacing lg='145' md='80'/>
       <Div className="container cs-shape_wrap_4">
-        <Div className="cs-shape_4"></Div>
-        <Div className="cs-shape_4"></Div>
+        <Div className="cs-shape_4" />
+        <Div className="cs-shape_4" />
         <Div className="container">
           <Div className="row">
             <Div className="col-xl-5 col-lg-6">
               <SectionHeading
-                title='Some pre questions and answers' 
-                subtitle='FAQ’s'
+                title='Some pre questions and answers'
+                subtitle='FAQ&rsquo;s'
               />
               <Spacing lg='90' md='45'/>
             </Div>
@@ -118,10 +132,10 @@ export default function ServiceDetailsPage() {
       </Div>
       <Spacing lg='150' md='80'/>
       <Div className="container">
-        <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
-          btnText='Apply For Meeting' 
-          btnLink='/contact' 
+        <Cta
+          title='Let&rsquo;s disscuse make <br />something <i>cool</i> together'
+          btnText='Apply For Meeting'
+          btnLink='/contact'
           bgSrc='/images/cta_bg.jpeg'
         />
       </Div>

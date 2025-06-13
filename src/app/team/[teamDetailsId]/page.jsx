@@ -7,7 +7,21 @@ import SocialWidget from "@/app/ui/Widget/SocialWidget"
 import imgUrl from '../../../../public/images/member_details_1.jpeg'
 import Image from "next/image"
 
-export default function TeamDetails() {
+export async function generateStaticParams() {
+  // This is a placeholder. In a real application, you would fetch this
+  // data from a CMS or database.
+  const team = [
+    { id: '1' },
+    { id: '2' },
+    { id: '3' },
+  ];
+
+  return team.map((member) => ({
+    teamDetailsId: member.id,
+  }));
+}
+
+export default function TeamDetails({ params }) {
   return (
     <>
       <PageHeading
@@ -44,7 +58,7 @@ export default function TeamDetails() {
       <Spacing lg='150' md='80'/>
       <Div className="container">
         <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
+          title='Let&rsquo;s disscuse make <br />something <i>cool</i> together' 
           btnText='Apply For Meeting' 
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'
