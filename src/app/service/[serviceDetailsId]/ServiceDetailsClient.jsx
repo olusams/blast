@@ -9,16 +9,51 @@ import SectionHeading from "@/app/ui/SectionHeading";
 import TestimonialSlider from "@/app/ui/Slider/TestimonialSlider";
 import Spacing from "@/app/ui/Spacing";
 import Image from "next/image";
-import serviceImage from '../../../../public/images/service_img_1.jpeg'
+import { notFound } from "next/navigation";
+import { serviceData } from "@/app/data/services";
+import Sidebar from "@/app/ui/Sidebar.jsx";
+import Post from '@/app/ui/Post';
 
 export default function ServiceDetailsClient({ params }) {
+  const { serviceDetailsId } = params;
+  const service = serviceData.find(
+    (service) => service.slug === serviceDetailsId
+  );
+
+  if (!service) {
+    return notFound();
+  }
+  const { title, description, imgUrl } = service;
   return (
     <>
-      <PageHeading 
-        title='Service Details'
-        bgSrc='/images/service_hero_bg.jpeg'
-        pageLinkText='SERVICE-DETAILS'
+      <PageHeading
+        title={title}
+        bgSrc="/images/service_hero_bg.jpeg"
+        pageLinkText={title}
       />
+      <Spacing lg="150" md="80" />
+      <Div className="container">
+        <Div className="row">
+          <Div className="col-lg-8">
+            <Div className="cs-post cs-style2">
+              <Div className="cs-post_thumb cs-radius_15">
+                <img
+                  src={imgUrl}
+                  alt="Post"
+                  className="w-100 h-100"
+                />
+              </Div>
+              <Div className="cs-post_info">
+                <h2 className="cs-post_title">{title}</h2>
+                <p>{description}</p>
+              </Div>
+            </Div>
+          </Div>
+          <Div className="col-lg-4">
+            <Sidebar />
+          </Div>
+        </Div>
+      </Div>
       <Spacing lg='145' md='80'/>
       <Div className="container">
         <SectionHeading 
@@ -59,7 +94,7 @@ export default function ServiceDetailsClient({ params }) {
         <Div className="row align-items-center">
           <Div className="col-xl-5 col-lg-6">
             <Div className="cs-radius_15 cs-shine_hover_1">
-              <Image src={serviceImage} alt="Service" className='cs-radius_15 w-100' placeholder="blur" />
+              <Image src={imgUrl} alt="Service" className='cs-radius_15 w-100' placeholder="blur" />
             </Div>
             <Spacing lg='0' md='40'/>
           </Div>

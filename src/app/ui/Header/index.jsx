@@ -46,7 +46,6 @@ export default function Header({ variant }) {
                   <ul
                     className="cs-nav_list"
                     id="cs-main-nav"
-                    style={{ display: `${mobileToggle ? 'block' : 'none'}` }}
                   >
                     <li>
                       <Link href="/" onClick={() => setMobileToggle(false)}>
@@ -113,7 +112,6 @@ export default function Header({ variant }) {
                     aria-controls="cs-side-header"
                   >
                     <span className="cs-icon_btn_in">
-                      <span />
                       <span />
                       <span />
                       <span />

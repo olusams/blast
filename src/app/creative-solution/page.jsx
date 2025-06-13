@@ -124,66 +124,17 @@ export default function CreativeSolutionHome() {
               </Div>
               <Div className="col-xl-8">
                 <Div className="row">
-                  <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                  <Div className="col-lg-3 col-sm-6">
-                    <Card
-                      title="UI/UX design"
-                      link="/service/ui-ux-design"
-                      src="/images/service_1.jpeg"
-                      alt="Service"
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
-                  <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                  <Div className="col-lg-3 col-sm-6">
-                    <Card
-                      title="React.js Development"
-                      link="/service/reactjs-development"
-                      src="/images/service_2.jpeg"
-                      alt="Service"
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
-                  <Div className="col-lg-3 col-sm-6">
-                    <Card
-                      title="Digital Marketing"
-                      link="/service/digital-marketing"
-                      src="/images/service_3.jpeg"
-                      alt="Service"
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
-                  <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                  <Div className="col-lg-3 col-sm-6">
-                    <Card
-                      title="Technology"
-                      link="/service/technology"
-                      src="/images/service_4.jpeg"
-                      alt="Service"
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
-                  <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                  <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                  <Div className="col-lg-3 col-sm-6">
-                    <Card
-                      title="Consultancy"
-                      link="/service/consultancy"
-                      src="/images/service_5.jpeg"
-                      alt="Service"
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
-                  <Div className="col-lg-3 col-sm-6 cs-hidden_mobile"></Div>
-                  <Div className="col-lg-3 col-sm-6">
-                    <Card
-                      title="Creative Design"
-                      link="/service/creative-design"
-                      src="/images/service_6.jpeg"
-                      alt="Service"
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
+                  {serviceData.map((service, index) => (
+                    <Div key={index} className="col-lg-3 col-sm-6">
+                      <Card
+                        title={service.title}
+                        link={`/service/${service.slug}`}
+                        src={service.imgUrl}
+                        alt={service.alt}
+                      />
+                      <Spacing lg="0" md="30" />
+                    </Div>
+                  ))}
                 </Div>
               </Div>
             </Div>

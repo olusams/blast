@@ -35,7 +35,7 @@ export default function LogoList() {
       alt: 'Dribbble',
     },
     {
-      src: '/images/leeds_united.svg',
+      src: '/images/leeds_united.png',
       alt: 'Leeds United',
     },
   ];
