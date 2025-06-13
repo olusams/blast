@@ -2,64 +2,8 @@ import { Icon } from '@iconify/react';
 import React from 'react';
 import Slider from 'react-slick';
 import Div from '../Div';
-import Team from '../Team/index.jsx';
-const teamData = [
-  {
-    memberImage: '/images/member_1.jpeg',
-    memberName: 'Rebeca Turner',
-    memberDesignation: 'Founder & CEO',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-  {
-    memberImage: '/images/member_2.jpeg',
-    memberName: 'David Johnson',
-    memberDesignation: 'Lead UI/UX Designer',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-  {
-    memberImage: '/images/member_3.jpeg',
-    memberName: 'Olivia Smith',
-    memberDesignation: 'Senior Full-Stack Developer',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-  {
-    memberImage: '/images/member_4.jpeg',
-    memberName: 'Louis Pete',
-    memberDesignation: 'Digital Marketing Lead',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-  {
-    memberImage: '/images/member_1.jpeg',
-    memberName: 'Michael Miller',
-    memberDesignation: 'DevOps Engineer',
-    memberSocial: {
-      linkedin: '/',
-      twitter: '/',
-      youtube: '/',
-      facebook: '/',
-    },
-  },
-];
+import Team from '../Team';
+import { teamData } from '@/app/data/team';
 
 export default function TeamSlider() {
   /** Team Member Data **/
@@ -122,6 +66,7 @@ export default function TeamSlider() {
         },
       },
     ],
+    variableWidth: true,
   };
 
   return (
@@ -133,6 +78,7 @@ export default function TeamSlider() {
             memberName={item.memberName}
             memberDesignation={item.memberDesignation}
             memberSocial={item.memberSocial}
+            memberSlug={item.slug}
           />
         </Div>
       ))}

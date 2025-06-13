@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/blast',
-  assetPrefix: '/blast/',
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['@iconify/react', 'swiper', 'react-slick'],
   },
   distDir: '.next',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',

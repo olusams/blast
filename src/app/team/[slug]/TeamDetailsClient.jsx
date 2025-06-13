@@ -4,10 +4,20 @@ import Div from "@/app/ui/Div"
 import PageHeading from "@/app/ui/PageHeading"
 import Spacing from "@/app/ui/Spacing"
 import SocialWidget from "@/app/ui/Widget/SocialWidget"
-import imgUrl from '../../../../public/images/member_details_1.jpeg'
+import { teamData } from "@/app/data/team"
 import Image from "next/image"
+import { notFound } from "next/navigation"
 
 export default function TeamDetailsClient({ params }) {
+  const { slug } = params;
+  const member = teamData.find(member => member.slug === slug);
+
+  if (!member) {
+    return notFound();
+  }
+
+  const { memberImage, memberName, memberDesignation } = member;
+
   return (
     <>
       <PageHeading
@@ -20,15 +30,15 @@ export default function TeamDetailsClient({ params }) {
         <Div className="row align-items-center">
           <Div className="col-xl-5 col-lg-6">
             <Div className="cs-radius_15 cs-shine_hover_1">
-              <Image src={imgUrl} alt="Member" className="w-100" placeholder="blur" />
+              <Image src={memberImage} alt="Member" className="w-100" placeholder="blur" blurDataURL={memberImage} width={540} height={540} />
             </Div>
           </Div>
           <Div className="col-lg-6 offset-xl-1">
             <Spacing lg='0' md='45'/>
             <Div className="cs-section_heading cs-style1">
-              <h2 className="cs-section_title">Melon Bulgery</h2>
+              <h2 className="cs-section_title">{memberName}</h2>
               <Div className="cs-height_10 cs-height_lg_10" />
-              <h3 className="cs-section_subtitle">Product Designer</h3>
+              <h3 className="cs-section_subtitle">{memberDesignation}</h3>
               <Div className="cs-height_5 cs-height_lg_5" />
               <Div className="cs-separator cs-accent_bg" />
               <Div className="cs-height_45 cs-height_lg_25" />
