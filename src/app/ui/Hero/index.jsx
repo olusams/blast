@@ -24,13 +24,13 @@ export default function Hero({
       <Div className="cs-shape_1" />
       <Div className="container">
         <Div className="cs-hero_text">
-          <h1 className="cs-hero_title">{parse(title)}</h1>
-          <Div className="cs-hero_info">
-            <Div>
+          <h1 className="text-4xl lg:text-7xl font-bold">{parse(title)}</h1>
+          <Div className="flex flex-col-reverse lg:flex-row items-start lg:items-center">
+            <Div className="mt-6 lg:mt-0">
               <Button btnLink={btnLink} btnText={btnText} />
             </Div>
-            <Div>
-              <Div className="cs-hero_subtitle">{subtitle}</Div>
+            <Div className="mt-6 lg:mt-0 lg:ml-12">
+              <Div className="text-lg lg:text-xl max-w-lg">{subtitle}</Div>
             </Div>
           </Div>
         </Div>
