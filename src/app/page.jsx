@@ -1,5 +1,6 @@
 'use client';
 import { useEffect } from 'react';
+import Image from 'next/image';
 import { useDynamicBg } from './context/DynamicBgContext';
 import Cta from '@/app/ui/Cta';
 import Div from '@/app/ui/Div';
@@ -291,9 +292,9 @@ export default function Home() {
       <Spacing lg="150" md="80" />
       <Div className="cs-shape_wrap_4">
         <Div className="cs-shape_4">
-          <img src="/images/partner_1.svg" alt="Partner" />
+          <Image src="/images/partner_1.svg" alt="Partner" width={100} height={50} />
         </Div>
-        <Div className="cs-shape_4"></Div>
+        <Div className="cs-shape_4" />
         <Div className="container">
           <Div className="row">
             <Div className="col-xl-4">

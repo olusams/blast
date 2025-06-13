@@ -3,8 +3,7 @@ import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import Div from '@ui/Div';
 import Image from 'next/image';
-import SEOLink from '@components/SEOLink';
-import StructuredData from '@components/StructuredData';
+import Link from 'next/link';
 
 /**
  * Team component displays a team member's information including their image, name, designation, and social media links.
@@ -87,19 +86,8 @@ const Team = ({
     };
   };
 
-  // Generate structured data for the team member
-  const teamMemberSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Person',
-    name: memberName,
-    jobTitle: memberDesignation,
-    image: memberImage,
-    sameAs: Object.values(memberSocial).filter(Boolean)
-  };
-
   return (
     <Div className="cs-team cs-style1" role="article" aria-label={`Team member: ${memberName}`}>
-      <StructuredData data={teamMemberSchema} />
       <Div className="cs-member_thumb">
         <Image 
           src={memberImage} 
@@ -114,19 +102,19 @@ const Team = ({
       </Div>
       <Div className="cs-member_info">
         <h2 className="cs-member_name">
-          <SEOLink 
+          <Link 
             href="/team/team-details" 
             title={`View details for ${memberName}`}
             aria-label={`View details for ${memberName}`}
           >
             {memberName}
-          </SEOLink>
+          </Link>
         </h2>
         <Div className="cs-member_designation">{memberDesignation}</Div>
       </Div>
       <Div className="cs-member_social cs-primary_color" role="list" aria-label="Social media links">
         {memberSocial.linkedin && (
-          <SEOLink 
+          <Link 
             href={memberSocial.linkedin} 
             style={getStyles(memberSocial.linkedin)} 
             role="listitem"
@@ -135,10 +123,10 @@ const Team = ({
             className="cs-social-link"
           >
             <Icon icon="fa6-brands:linkedin-in" width="16" height="16" aria-hidden="true" />
-          </SEOLink>
+          </Link>
         )}
         {memberSocial.twitter && (
-          <SEOLink 
+          <Link 
             href={memberSocial.twitter} 
             style={getStyles(memberSocial.twitter)} 
             role="listitem"
@@ -147,10 +135,10 @@ const Team = ({
             className="cs-social-link"
           >
             <Icon icon="fa-brands:twitter" width="16" height="16" aria-hidden="true" />
-          </SEOLink>
+          </Link>
         )}
         {memberSocial.youtube && (
-          <SEOLink 
+          <Link 
             href={memberSocial.youtube} 
             style={getStyles(memberSocial.youtube)} 
             role="listitem"
@@ -159,10 +147,10 @@ const Team = ({
             className="cs-social-link"
           >
             <Icon icon="fa-brands:youtube" width="16" height="16" aria-hidden="true" />
-          </SEOLink>
+          </Link>
         )}
         {memberSocial.facebook && (
-          <SEOLink 
+          <Link 
             href={memberSocial.facebook} 
             style={getStyles(memberSocial.facebook)} 
             role="listitem"
@@ -171,7 +159,7 @@ const Team = ({
             className="cs-social-link"
           >
             <Icon icon="fa-brands:facebook-f" width="16" height="16" aria-hidden="true" />
-          </SEOLink>
+          </Link>
         )}
       </Div>
     </Div>
