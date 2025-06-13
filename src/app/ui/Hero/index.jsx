@@ -24,7 +24,9 @@ export default function Hero({
       <Div className="cs-shape_1" />
       <Div className="container">
         <Div className="cs-hero_text">
-          <h1 className="text-2xl lg:text-6xl font-bold">{parse(title)}</h1>
+          <h1 className="text-2xl lg:text-6xl font-bold">
+            {parse(title || '')}
+          </h1>
           <Div className="flex flex-col-reverse lg:flex-row items-start lg:items-center">
             <Div className="mt-6 lg:mt-0">
               <Button btnLink={btnLink} btnText={btnText} />
