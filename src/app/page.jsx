@@ -16,7 +16,6 @@ import TestimonialSlider from '@/app/ui/Slider/TestimonialSlider';
 import TimelineSlider from '@/app/ui/Slider/TimelineSlider';
 import Spacing from '@/app/ui/Spacing';
 import VideoModal from '@/app/ui/VideoModal';
-import Card from './ui/Card';
 
 // FunFact Data
 const funfaceData = [
@@ -80,57 +79,6 @@ const portfolioData = [
   },
 ];
 
-const servicesData = [
-  {
-    title: 'Bespoke Web Development',
-    link: '/service/service-details',
-    src: '/images/service_1.jpeg',
-    alt: 'Bespoke Web Development',
-  },
-  {
-    title: 'UI/UX Design',
-    link: '/service/service-details',
-    src: '/images/service_2.jpeg',
-    alt: 'UI/UX Design',
-  },
-  {
-    title: 'eCommerce Solutions',
-    link: '/service/service-details',
-    src: '/images/service_3.jpeg',
-    alt: 'eCommerce Solutions',
-  },
-  {
-    title: 'SEO & Digital Strategy',
-    link: '/service/service-details',
-    src: '/images/service_4.jpeg',
-    alt: 'SEO & Digital Strategy',
-  },
-  {
-    title: 'Cloud & DevOps',
-    link: '/service/service-details',
-    src: '/images/service_5.jpeg',
-    alt: 'Cloud & DevOps',
-  },
-  {
-    title: 'Mobile App Development',
-    link: '/service/service-details',
-    src: '/images/service_6.jpeg',
-    alt: 'Mobile App Development',
-  },
-  {
-    title: 'AI Integration',
-    link: '/service/service-details',
-    src: '/images/service_7.jpeg',
-    alt: 'AI Integration',
-  },
-  {
-    title: 'Ongoing Support',
-    link: '/service/service-details',
-    src: '/images/offer.jpeg',
-    alt: 'Ongoing Support',
-  },
-];
-
 export default function Home() {
   const { setBackground } = useDynamicBg();
 
@@ -168,34 +116,28 @@ export default function Home() {
 
       {/* Start Service Section */}
       <Spacing lg="150" md="80" />
-      <Div id="service">
-        <Div className="container">
-          <Div className="row">
-            <Div className="col-xl-4">
-              <SectionHeading
-                title="Our Expertise, Your Advantage"
-                subtitle="Core Services"
-                btnText="Explore All Services"
-                btnLink="/service"
-              />
-              <Spacing lg="90" md="45" />
-            </Div>
-            <Div className="col-xl-8">
-              <Div className="row">
-                {servicesData.map((service, index) => (
-                  <Div className="col-lg-3 col-sm-6" key={index}>
-                    <Card
-                      title={service.title}
-                      link={service.link}
-                      src={service.src}
-                      alt={service.alt}
-                    />
-                    <Spacing lg="0" md="30" />
-                  </Div>
-                ))}
-              </Div>
-            </Div>
-          </Div>
+      <Div id="service" className="container">
+        <SectionHeading
+          title="Our Expertise, Your Advantage"
+          variant="cs-style1 text-center"
+        />
+        <Spacing lg="70" md="45" />
+        <Div className="flex flex-wrap justify-center items-center gap-4">
+          <span className="text-base md:text-lg m-2 py-2 px-4 bg-gray-800 rounded-full">
+            Bespoke Web Development
+          </span>
+          <span className="text-base md:text-lg m-2 py-2 px-4 bg-gray-800 rounded-full">
+            Mobile App Development
+          </span>
+          <span className="text-base md:text-lg m-2 py-2 px-4 bg-gray-800 rounded-full">
+            SEO & Digital Solutions
+          </span>
+          <span className="text-base md:text-lg m-2 py-2 px-4 bg-gray-800 rounded-full">
+            Ongoing Support
+          </span>
+          <span className="text-base md:text-lg m-2 py-2 px-4 bg-gray-800 rounded-full">
+            Maintenance
+          </span>
         </Div>
       </Div>
       {/* End Service Section */}
