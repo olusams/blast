@@ -36,8 +36,8 @@ export default function Header({ variant }) {
                   <Image
                     src="/images/logorempl.png"
                     alt="Logo"
-                    width={150}
-                    height={40}
+                    width={130}
+                    height={35}
                   />
                 </Link>
               </Div>
@@ -144,7 +144,7 @@ export default function Header({ variant }) {
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" href="/">
-            <Image src="/images/logorempl.png" alt="Logo" width={150} height={40} />
+            <Image src="/images/logorempl.png" alt="Logo" width={130} height={35} />
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">

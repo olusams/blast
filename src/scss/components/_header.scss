@@ -1,0 +1,20 @@
+.cs-main_header_in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 991px) {
+  .cs-main_header_in {
+    .cs-main_header_left,
+    .cs-main_header_center,
+    .cs-main_header_right {
+      align-self: center;
+    }
+
+    .cs-nav {
+      display: flex;
+      align-items: center;
+    }
+  }
+} 
