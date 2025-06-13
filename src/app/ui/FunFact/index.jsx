@@ -41,20 +41,25 @@ export default function FunFact({ variant, title, subtitle, data }) {
       </Div>
       <Div className="cs-funfact_right">
         <Div className="cs-funfacts">
-          {data.map((item, index) => (
-            <Div className="cs-funfact cs-style1" key={index}>
-              <Div
-                className="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"
-                style={{ color: item.color }}
-              >
-                <CountUp end={item.factNumber} duration={2000} />
+          {data.map((item, index) => {
+            const number = parseInt(item.factNumber, 10);
+            const suffix = item.factNumber.replace(number.toString(), '');
+            return (
+              <Div className="cs-funfact cs-style1" key={index}>
+                <Div
+                  className="cs-funfact_number cs-primary_font cs-semi_bold cs-primary_color"
+                  style={{ color: item.color }}
+                >
+                  <CountUp end={number} duration={2000} />
+                  {suffix}
+                </Div>
+                <Div className="cs-funfact_text">
+                  <span className="cs-accent_color" />
+                  <p>{item.title}</p>
+                </Div>
               </Div>
-              <Div className="cs-funfact_text">
-                <span className="cs-accent_color">+</span>
-                <p>{item.title}</p>
-              </Div>
-            </Div>
-          ))}
+            );
+          })}
         </Div>
       </Div>
     </Div>
