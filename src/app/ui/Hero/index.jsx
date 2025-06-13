@@ -24,7 +24,7 @@ export default function Hero({
       <Div className="cs-shape_1" />
       <Div className="container">
         <Div className="cs-hero_text pt-12">
-          <h1 className="text-base lg:text-3xl font-bold">
+          <h1 className="text-base lg:text-4xl font-bold">
             {parse(title || '')}
           </h1>
           <Div className="flex flex-col-reverse lg:flex-row items-start lg:items-center">
