@@ -2,7 +2,7 @@ import React from 'react';
 import { Icon } from '@iconify/react';
 import PropTypes from 'prop-types';
 import Div from '@ui/Div';
-import SEOImage from '@components/SEOImage';
+import Image from 'next/image';
 import SEOLink from '@components/SEOLink';
 import StructuredData from '@components/StructuredData';
 
@@ -101,12 +101,13 @@ const Team = ({
     <Div className="cs-team cs-style1" role="article" aria-label={`Team member: ${memberName}`}>
       <StructuredData data={teamMemberSchema} />
       <Div className="cs-member_thumb">
-        <SEOImage 
+        <Image 
           src={memberImage} 
           alt={`${memberName} - ${memberDesignation}`}
-          width={300}
-          height={300}
-          loading="lazy"
+          fill
+          sizes="100vw"
+          placeholder="blur"
+          blurDataURL={memberImage}
           className="cs-member_image"
         />
         <Div className="cs-member_overlay" />
