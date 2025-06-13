@@ -38,26 +38,15 @@
       margin-bottom: 10px;
     }
   }
-  .cs-card_title {
-    font-size: 22px;
-    margin: 0;
-    line-height: 1.5em;
-  }
 }
 
 @media screen and (max-width: 1400px) {
-  .cs-card.cs-style1 .cs-card_title {
-    font-size: 20px;
-  }
   .cs-card.cs-style1 .cs-card_info {
     padding: 40px 18px 0;
   }
 }
 
 @media screen and (max-width: 1199px) {
-  .cs-card.cs-style1 .cs-card_title {
-    font-size: 24px;
-  }
   .cs-card.cs-style1 .cs-card_info {
     padding: 40px 30px;
     height: 100%;

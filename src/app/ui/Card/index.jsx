@@ -11,7 +11,7 @@ export default function Card({ title, link, src, alt }) {
         <Div className="cs-card_overlay" />
         <Div className="cs-card_info">
           <span className=" cs-hover_layer3 cs-accent_bg" />
-          <h2 className="cs-card_title">{title}</h2>
+          <h2 className="text-xl lg:text-2xl [text-shadow:1px_1px_2px_rgba(0,0,0,0.5)]">{title}</h2>
         </Div>
       </>
     </Link>

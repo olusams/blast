@@ -77,21 +77,21 @@
   position: relative;
   .cs-down_btn {
     bottom: 30px;
+    }
   }
-}
 .cs-hero.cs-style2 {
   height: 90vh;
   min-height: 700px;
-}
+  }
 .cs-hero.cs-style3 {
   height: 95vh;
   min-height: 750px;
-}
+  }
 .cs-hero.cs-style4 {
   height: 100vh;
   min-height: 800px;
   border-bottom-right-radius: 200px;
-}
+    }
 .cs-hero.cs-style5 {
   height: 100vh;
   min-height: 800px;
@@ -110,7 +110,7 @@
   left: 50%;
   transform: translateX(-50%);
   color: #fff;
-  border-radius: 50%;
+    border-radius: 50%;
   height: 30px;
   width: 30px;
   display: flex;
@@ -119,7 +119,7 @@
   text-decoration: none;
   font-size: 20px;
   &::after {
-    content: '';
+        content: '';
     position: absolute;
     height: 100%;
     width: 100%;
@@ -141,8 +141,8 @@
   position: relative;
   .cs-down_btn {
     bottom: 30px;
+    }
   }
-}
 
 .cs-hero.cs-style8 {
   background: linear-gradient(267deg, #161616 0%, #080808 100%);
