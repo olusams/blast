@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Div from '../Div';
+import Image from 'next/image';
 
 const serviceData = [
   {
@@ -50,10 +51,14 @@ export default function ServiceList({ variant }) {
             <>
               <Div className="cs-image_layer cs-style1 cs-size_md">
                 <Div className="cs-image_layer_in">
-                  <img
+                  <Image
                     src={item.imgUrl}
                     alt="Thumb"
-                    className="w-100 cs-radius_15"
+                    fill
+                    sizes="100vw"
+                    className="cs-radius_15"
+                    placeholder="blur"
+                    blurDataURL={item.imgUrl}
                   />
                 </Div>
               </Div>

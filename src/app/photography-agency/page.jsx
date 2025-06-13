@@ -60,7 +60,7 @@ export default function PhotographyAgencyHome() {
   return (
     <>
       {/* Start Hero Section */}
-      <Hero2 data={heroData} phoneNumber="+044 546664" email="info@arino.com" />
+      <Hero2 data={heroData} phoneNumber="+044 546664" email="info@remlyx.com" />
       {/* End Hero Section */}
 
       {/* Start About Section */}

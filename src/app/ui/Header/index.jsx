@@ -5,6 +5,7 @@ import Link from 'next/link';
 import ContactInfoWidget from '@/app/ui/Widget/ContactInfoWidget';
 import Newsletter from '@/app/ui/Widget/Newsletter';
 import SocialWidget from '@/app/ui/Widget/SocialWidget';
+import Image from 'next/image';
 
 export default function Header({ variant }) {
   const [isSticky, setIsSticky] = useState(false);
@@ -32,7 +33,7 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" href="/">
-                  <img src="/images/logorempl.png" alt="Logo" />
+                  <Image src="/images/logorempl.png" alt="Logo" width={150} height={40} />
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
@@ -134,11 +135,11 @@ export default function Header({ variant }) {
         <Div className="cs-side_header_in">
           <Div className="cs-side_header_shape" />
           <Link className="cs-site_branding" href="/">
-            <img src="/images/logorempl.png" alt="Logo" />
+            <Image src="/images/logorempl.png" alt="Logo" width={150} height={40} />
           </Link>
           <Div className="cs-side_header_box">
             <h2 className="cs-side_header_heading">
-              Do you have a project in your <br /> mind? Keep connect us.
+              Have a project in mind? <br /> Let&rsquo;s connect and bring it to life.
             </h2>
           </Div>
           <Div className="cs-side_header_box">

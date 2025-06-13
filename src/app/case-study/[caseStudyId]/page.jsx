@@ -48,19 +48,27 @@ export default function CaseStudyDetailsPage() {
         </p>
         <Spacing lg="65" md="45" />
         <Div className="row">
-          <Div className="col-sm-6">
-            <img
+          <Div className="col-sm-6" style={{position: 'relative', minHeight: '300px'}}>
+            <Image
               src="/images/case_study_img_2.jpeg"
               alt="Thumb"
-              className="w-100 cs-radius_5"
+              className="cs-radius_5"
+              fill
+              sizes="100vw"
+              placeholder="blur"
+              blurDataURL="/images/case_study_img_2.jpeg"
             />
             <Spacing lg="25" md="25" />
           </Div>
-          <Div className="col-sm-6">
-            <img
+          <Div className="col-sm-6" style={{position: 'relative', minHeight: '300px'}}>
+            <Image
               src="/images/case_study_img_3.jpeg"
               alt="Thumb"
-              className="w-100 cs-radius_5"
+              className="cs-radius_5"
+              fill
+              sizes="100vw"
+              placeholder="blur"
+              blurDataURL="/images/case_study_img_3.jpeg"
             />
             <Spacing lg="25" md="25" />
           </Div>
@@ -92,11 +100,12 @@ export default function CaseStudyDetailsPage() {
               </p>
             </Div>
             <Div className="col-lg-6 offset-lg-1 text-center">
-              <Div className="cs-portfolio_img_in cs-shine_hover_1 rounded-circle">
-                <img
+              <Div className="cs-portfolio_img_in cs-shine_hover_1 rounded-circle" style={{position: 'relative', minHeight: '300px', width: '100%'}}>
+                <Image
                   src="/images/case_study_img_4.png"
                   alt="Case study"
-                  className="w-100"
+                  fill
+                  sizes="100vw"
                 />
               </Div>
               <Spacing lg="0" md="40" />
@@ -105,11 +114,12 @@ export default function CaseStudyDetailsPage() {
           <Spacing lg="100" md="80" />
           <Div className="row align-items-center">
             <Div className="col-lg-6 text-center">
-              <Div className="cs-portfolio_img_in cs-shine_hover_1 rounded-circle">
-                <img
+              <Div className="cs-portfolio_img_in cs-shine_hover_1 rounded-circle" style={{position: 'relative', minHeight: '300px', width: '100%'}}>
+                <Image
                   src="/images/case_study_img_5.png"
                   alt="Case study"
-                  className="w-100"
+                  fill
+                  sizes="100vw"
                 />
               </Div>
               <Spacing lg="0" md="40" />
@@ -160,7 +170,7 @@ export default function CaseStudyDetailsPage() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Let&rsquo;s disscuse make <br />something <i>cool</i> together"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg.jpeg"

@@ -25,38 +25,64 @@ const defaultSocialData = [
 
 export default function SocialWidget() {
   const getStyles = (url) => {
-    if (url.includes('facebook.com')) {
-      return {
-        backgroundColor: '#1877f2',
-        borderColor: '#1877f2',
-        color: '#fff'
-      };
-    }
-    if (url.includes('linkedin.com')) {
-      return {
-        backgroundColor: '#0077b5',
+    const socialStyles = {
+      'linkedin.com': {
+        background: 'linear-gradient(45deg, #0077b5, #00a0dc)',
         borderColor: '#0077b5',
-        color: '#fff'
-      };
-    }
-    if (url.includes('twitter.com')) {
-      return {
-        backgroundColor: '#1da1f2',
+        color: '#fff',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          transform: 'translateY(-3px)',
+          boxShadow: '0 5px 15px rgba(0, 119, 181, 0.3)'
+        }
+      },
+      'twitter.com': {
+        background: 'linear-gradient(45deg, #1da1f2, #0d8bd9)',
         borderColor: '#1da1f2',
-        color: '#fff'
-      };
-    }
-    if (url.includes('instagram.com')) {
-      return {
+        color: '#fff',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          transform: 'translateY(-3px)',
+          boxShadow: '0 5px 15px rgba(29, 161, 242, 0.3)'
+        }
+      },
+      'instagram.com': {
         background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)',
         borderColor: '#e4405f',
-        color: '#fff'
-      };
+        color: '#fff',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          transform: 'translateY(-3px)',
+          boxShadow: '0 5px 15px rgba(228, 64, 95, 0.3)'
+        }
+      },
+      'facebook.com': {
+        background: 'linear-gradient(45deg, #1877f2, #0d6efd)',
+        borderColor: '#1877f2',
+        color: '#fff',
+        transition: 'all 0.3s ease',
+        '&:hover': {
+          transform: 'translateY(-3px)',
+          boxShadow: '0 5px 15px rgba(24, 119, 242, 0.3)'
+        }
+      }
+    };
+
+    for (const [platform, style] of Object.entries(socialStyles)) {
+      if (url.includes(platform)) {
+        return style;
+      }
     }
+
     return {
-      backgroundColor: 'transparent',
+      background: 'linear-gradient(45deg, #333, #666)',
       borderColor: '#fff',
-      color: '#fff'
+      color: '#fff',
+      transition: 'all 0.3s ease',
+      '&:hover': {
+        transform: 'translateY(-3px)',
+        boxShadow: '0 5px 15px rgba(255, 255, 255, 0.3)'
+      }
     };
   };
 
@@ -65,13 +91,14 @@ export default function SocialWidget() {
       {defaultSocialData.map((item, index) => (
         <Link 
           href={item.url} 
-          className="cs-center" 
+          className="cs-center cs-social-link" 
           key={index} 
           target="_blank" 
           rel="noopener noreferrer"
           style={getStyles(item.url)}
+          aria-label={`Visit our ${item.url.split('.')[1]} page`}
         >
-          <Icon icon={item.icon} width="20" height="20" />
+          <Icon icon={item.icon} width="20" height="20" aria-hidden="true" />
         </Link>
       ))}
     </Div>

@@ -44,12 +44,12 @@ export default function BlogDetailsPage() {
                 </blockquote>
                 <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated.</p>
                 <Div className="row">
-                  <Div className="col-md-6">
-                    <img src="/images/blog_details_img_1.jpeg" alt="Blog Details" className="cs-radius_15 w-100" />
+                  <Div className="col-md-6" style={{position: 'relative', minHeight: '300px'}}>
+                    <Image src="/images/blog_details_img_1.jpeg" alt="Blog Details" className="cs-radius_15" fill sizes="100vw" placeholder="blur" blurDataURL="/images/blog_details_img_1.jpeg"/>
                     <Div className="cs-height_45 cs-height_lg_45" />
                   </Div>
-                  <Div className="col-md-6">
-                    <img src="/images/blog_details_img_2.jpeg" alt="Blog Details" className="cs-radius_15 w-100" />
+                  <Div className="col-md-6" style={{position: 'relative', minHeight: '300px'}}>
+                    <Image src="/images/blog_details_img_2.jpeg" alt="Blog Details" className="cs-radius_15" fill sizes="100vw" placeholder="blur" blurDataURL="/images/blog_details_img_2.jpeg" />
                     <Div className="cs-height_45 cs-height_lg_45" />
                   </Div>
                 </Div>
@@ -110,7 +110,7 @@ export default function BlogDetailsPage() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta 
-          title='Let’s disscuse make <br />something <i>cool</i> together' 
+          title='Let&rsquo;s disscuse make <br />something <i>cool</i> together' 
           btnText='Apply For Meeting' 
           btnLink='/contact' 
           bgSrc='/images/cta_bg.jpeg'

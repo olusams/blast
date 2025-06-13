@@ -2,6 +2,7 @@ import React from 'react';
 import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
+import Image from 'next/image';
 
 const galleryData = [
   {
@@ -36,7 +37,7 @@ const GalleryItem = ({ src }) => {
           className="cs-portfolio_bg cs-bg"
           style={{ backgroundImage: `url("${src}")` }}
         >
-          <img src={src} alt="Gallery" className='position-absolute' />
+          <Image src={src} alt="Gallery" fill sizes="100vw" />
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import React from 'react';
 import Div from '../Div';
 import './logolist.scss';
+import Image from 'next/image';
 
 export default function LogoList() {
   const partnerLogos = [
@@ -41,7 +42,7 @@ export default function LogoList() {
           className={`cs-partner_logo ${partnerLogo.isBlack ? 'black-logo' : ''}`}
           key={index}
         >
-          <img src={partnerLogo.src} alt={partnerLogo.alt} />
+          <Image src={partnerLogo.src} alt={partnerLogo.alt} width={100} height={50} />
         </Div>
       ))}
     </Div>

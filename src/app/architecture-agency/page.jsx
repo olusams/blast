@@ -13,6 +13,7 @@ import TestimonialSliderStyle2 from '@/app/ui/Slider/TestimonialSliderStyle2';
 import Spacing from '@/app/ui/Spacing';
 import ContactInfoWidget from '@/app/ui/Widget/ContactInfoWidget';
 import { Icon } from '@iconify/react';
+import Image from 'next/image';
 
 const funfaceData = [
   {
@@ -63,7 +64,7 @@ export default function ArchitectureAgencyHome() {
   return (
     <>
       <Hero9
-        title="Arino Wheres Vision Meets Structure."
+        title="Remlyx Where Vision Meets Structure."
         subtitle="We deliver best problem solving solution for our client and provide finest <br /> finishing product in present and upcoming future."
         btnLink="/about"
         btnText="Load More"
@@ -85,7 +86,7 @@ export default function ArchitectureAgencyHome() {
                 This is the main factor that sets us apart from our competition
                 and allows us to deliver a specialist business consultancy
                 service. Our team applies its wide-ranging experience to
-                determining. Through our years of experience, we’ve also learned
+                determining. Through our years of experience, we&apos;ve also learned
                 that while each channel.
               </p>
               <Spacing lg="30" md="30" />
@@ -93,27 +94,39 @@ export default function ArchitectureAgencyHome() {
               <Spacing lg="25" md="40" />
             </SectionHeading>
           </Div>
-          <Div className="col-lg-5 offset-xl-2">
-            <img
+          <Div className="col-lg-5 offset-xl-2" style={{position: 'relative', minHeight: '300px'}}>
+            <Image
               src="/images/about_img_6.jpeg"
               alt="About"
-              className="w-100 cs-radius_15"
+              fill
+              sizes="100vw"
+              className="cs-radius_15"
+              placeholder="blur"
+              blurDataURL="/images/about_img_6.jpeg"
             />
             <Spacing lg="25" md="25" />
           </Div>
-          <Div className="col-lg-7">
-            <img
+          <Div className="col-lg-7" style={{position: 'relative', minHeight: '300px'}}>
+            <Image
               src="/images/about_img_7.jpeg"
               alt="About"
-              className="w-100 cs-radius_15"
+              fill
+              sizes="100vw"
+              className="cs-radius_15"
+              placeholder="blur"
+              blurDataURL="/images/about_img_7.jpeg"
             />
             <Spacing lg="25" md="25" />
           </Div>
-          <Div className="col-lg-5">
-            <img
+          <Div className="col-lg-5" style={{position: 'relative', minHeight: '300px'}}>
+            <Image
               src="/images/about_img_8.jpeg"
               alt="About"
-              className="w-100 cs-radius_15"
+              fill
+              sizes="100vw"
+              className="cs-radius_15"
+              placeholder="blur"
+              blurDataURL="/images/about_img_8.jpeg"
             />
             <Spacing lg="25" md="25" />
           </Div>

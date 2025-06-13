@@ -61,7 +61,7 @@ export default function CreativePortfolioHome() {
     <>
       {/* Start Hero Section */}
       <Hero3
-        title="Arino Creative <br />Portfolio"
+        title="Remlyx Creative <br />Portfolio"
         btnLink="contact"
         btnText={`Let's talk`}
         socialLinksHeading="Follow Us"
@@ -145,7 +145,7 @@ export default function CreativePortfolioHome() {
       {/* Start CTA Section */}
       <Div className="container">
         <Cta
-          title="Let’s disscuse make <br />something <i>cool</i> together"
+          title="Let's disscuse make <br />something <i>cool</i> together"
           btnText="Apply For Meeting"
           btnLink="/contact"
           bgSrc="/images/cta_bg_3.jpeg"

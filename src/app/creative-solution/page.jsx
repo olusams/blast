@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image';
 // import Card from "../ui/Card";
 import Cta from "@/app/ui/Cta";
 import CtaStyle2 from "@/app/ui/Cta/CtaStyle2";
@@ -17,7 +18,7 @@ export default function CreativeSolutionHome() {
   return (
     <>
       <Hero10
-        title="Creative People’s Creative Mind"
+        title="Creative People's Creative Mind"
         subtitle="We deliver best problem solving solution for our client and provide
         finest finishing product in present and upcoming future."
         btnLink="/portfolio"
@@ -67,11 +68,15 @@ export default function CreativeSolutionHome() {
       <section>
         <div className="container">
           <div className="row align-items-center ">
-            <div className="col-lg-5">
-              <img
+            <div className="col-lg-5" style={{position: 'relative', minHeight: '300px'}}>
+              <Image
                 src="/images/about_img_9.jpeg"
                 alt="About"
-                className="w-100 cs-radius_5"
+                className="cs-radius_5"
+                fill
+                sizes="100vw"
+                placeholder="blur"
+                blurDataURL="/images/about_img_9.jpeg"
               />
             </div>
             <div className="col-lg-6 offset-lg-1">
@@ -88,7 +93,7 @@ export default function CreativeSolutionHome() {
                   competition and allows us to deliver a specialist business
                   consultancy service. Our team applies its wide-ranging
                   experience to determining. Through our years of experience,
-                  we’ve also learned that while each channel. <br />
+                  we&rsquo;ve also learned that while each channel. <br />
                   <br />
                   This is the main factor that sets us apart from our
                   competition and allows us to deliver a specialist business
@@ -215,7 +220,7 @@ export default function CreativeSolutionHome() {
       {/* End Testimonial Section */}
       {/* Start CTA Section */}
       <Cta
-        title="Let’s disscuse make <br />something <i>cool</i> together"
+        title="Let's disscuse make <br />something <i>cool</i> together"
         btnText="Apply For Meeting"
         btnLink="/contact"
         bgSrc="/images/cta_bg_5.jpeg"

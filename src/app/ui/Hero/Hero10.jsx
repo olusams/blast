@@ -29,10 +29,10 @@ export default function Hero10({
         <Image src={shape1Url} alt="Hero Img" placeholder='blur' />
       </div>
       <div className="cs-hero_img_2">
-        <img src={shape2Url} alt="Hero Img" />
+        <Image src={shape2Url} alt="Hero Img" width={400} height={400} />
       </div>
       <div className="cs-hero_img_3">
-        <img src={shape3Url} alt="Hero Img" />
+        <Image src={shape3Url} alt="Hero Img" width={400} height={400} />
       </div>
     </div>
   );

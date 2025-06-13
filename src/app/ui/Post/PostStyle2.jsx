@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import Button from '../Button';
 import Div from '../Div';
+import Image from 'next/image';
 
 export default function PostStyle2({
   thumb,
@@ -15,7 +16,7 @@ export default function PostStyle2({
   return (
     <Div className="cs-post cs-style2">
       <Link href={href} className="cs-post_thumb cs-radius_15">
-        <img src={thumb} alt="Post" className="w-100 cs-radius_15" />
+        <Image src={thumb} alt="Post" fill sizes="100vw" placeholder="blur" blurDataURL={thumb}/>
       </Link>
       <Div className="cs-post_info">
         <Div className="cs-post_meta cs-style1 cs-ternary_color cs-semi_bold cs-primary_font">

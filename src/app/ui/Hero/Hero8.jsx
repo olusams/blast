@@ -2,6 +2,7 @@ import React from 'react';
 import Link from "next/link";;
 import VerticalLinks from '../VerticalLinks';
 import parse from 'html-react-parser';
+import Image from 'next/image';
 
 export default function Hero8({
   title,
@@ -44,7 +45,7 @@ export default function Hero8({
       <div className="cs-hero_highlite cs-primary_color cs-accent_color cs-center">
         {bannerHighlightText}
         <div className="cs-round_img cs-center">
-          <img src={spiningCircleUrl} alt="Circle" />
+          <Image src={spiningCircleUrl} alt="Circle" width={100} height={100} />
         </div>
       </div>
       <VerticalLinks

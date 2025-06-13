@@ -4,6 +4,7 @@ import { Icon } from '@iconify/react';
 import Testimonial from '../Testimonial';
 import Div from '../Div';
 import Spacing from '../Spacing';
+import Image from 'next/image';
 const testimonialData = [
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
@@ -81,7 +82,7 @@ export default function TestimonialSlider() {
       <Div className="cs-gradient_bg_1 cs-shape_wrap_3 cs-parallax">
         <Spacing lg="130" md="80" />
         <Div className="cs-shape_3 cs-to_up">
-          <img src="/images/shape_1.svg" alt="Shape" />
+          <Image src="/images/shape_1.svg" alt="Shape" width={100} height={100} />
         </Div>
         <Div className="container">
           <Div className="cs-testimonial_slider">
@@ -100,7 +101,7 @@ export default function TestimonialSlider() {
                   <Div className="slider-nav_item" key={index}>
                     <Div className="cs-rotate_img">
                       <Div className="cs-rotate_img_in">
-                        <img src={item.testimonialThumb} alt="Thumb" />
+                        <Image src={item.testimonialThumb} alt="Thumb" width={100} height={100} />
                       </Div>
                     </Div>
                   </Div>

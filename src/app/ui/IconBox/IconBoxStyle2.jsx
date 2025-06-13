@@ -1,5 +1,6 @@
 import React from 'react';
-import Link from "next/link";;
+import Link from "next/link";
+import Image from 'next/image';
 
 export default function IconBoxStyle2({
   title,
@@ -11,7 +12,7 @@ export default function IconBoxStyle2({
   return (
     <div className="cs-iconbox cs-style4">
       <div className="cs-iconbox_icon">
-        <img src={iconUrl} alt="Icon" />
+        <Image src={iconUrl} alt="Icon" width={50} height={50} />
       </div>
       <h2 className="cs-iconbox_title">
         <Link href={btnLink}>{title}</Link>

@@ -6,6 +6,7 @@ import Spacing from '../Spacing';
 import LightGallery from 'lightgallery/react';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
+import Image from 'next/image';
 const portfolioData = [
   {
     title: 'Colorful Art Work',
@@ -211,10 +212,12 @@ export default function MasonryGallery() {
               style={{ height: `${item.height}px` }}
             >
               <Div className="cs-lightbox_item">
-                <img
+                <Image
                   src={item.src}
                   alt={item.title}
-                  style={{ height: `${item.height}px` }}
+                  height={item.height}
+                  width={0}
+                  style={{width: '100%', height: 'auto'}}
                 />
               </Div>
               <Div className="cs-portfolio_hover" />

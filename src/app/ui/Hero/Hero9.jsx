@@ -49,7 +49,7 @@ export default function Hero9({
                   className="cs-hero_video_btn cs-center"
                   onClick={handelClick}
                 >
-                  <img src={spiningCircleUrl} alt="Rotate" />
+                  <Image src={spiningCircleUrl} alt="Rotate" width={100} height={100} />
                   <svg
                     width={25}
                     height={32}

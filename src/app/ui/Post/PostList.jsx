@@ -1,11 +1,12 @@
 import React from 'react';
+import Image from 'next/image';
 const postData = [
   {
     title: 'How to keep fear from ruining your art business with confident',
     postHref: '/blog/blog-details',
     subtitle:
       'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium lorema doloremque laudantium, totam rem aperiam, eaque ipsa quae...',
-    authorName: 'Arino Admin',
+    authorName: 'Remlyx Admin',
     authorImg: '/images/avatar_2.jpeg',
     authorDesignation: 'London, United Kindom',
     date: '07',
@@ -61,7 +62,7 @@ export default function PostList() {
               <div className="cs-post_meta">
                 <div className="cs-post_avatar">
                   <div className="cs-post_avatar_img">
-                    <img src={item.authorImg} alt="Avatar" />
+                    <Image src={item.authorImg} alt="Avatar" width={50} height={50} />
                   </div>
                   <div className="cs-post_avatar_info">
                     <h4>{item.authorName}</h4>

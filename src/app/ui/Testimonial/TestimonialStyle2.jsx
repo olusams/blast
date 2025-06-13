@@ -1,5 +1,6 @@
 import React from 'react';
 import Div from '../Div';
+import Image from 'next/image';
 
 export default function TestimonialStyle2({
   avatarImgUrl,
@@ -12,7 +13,7 @@ export default function TestimonialStyle2({
     <Div className="cs-testimonial cs-style3">
       <Div className="cs-client_info">
         <Div className="cs-client_img">
-          <img src={avatarImgUrl} alt="Avatar" />
+          <Image src={avatarImgUrl} alt="Avatar" width={50} height={50} />
         </Div>
         <Div className="cs-client_meta">
           <h4 className="cs-client_name">{avatarName}</h4>
