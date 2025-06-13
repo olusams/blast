@@ -16,7 +16,7 @@ export default function Hero({
 }) {
   return (
     <Div
-      className="cs-hero cs-style1 cs-bg cs-fixed_bg cs-shape_wrap_1 pt-32"
+      className="cs-hero cs-style1 cs-bg cs-fixed_bg cs-shape_wrap_1 pt-40"
       style={{ backgroundImage: `url(${bgImageUrl})` }}
     >
       <Div className="cs-shape_1" />
@@ -24,7 +24,7 @@ export default function Hero({
       <Div className="cs-shape_1" />
       <Div className="container">
         <Div className="cs-hero_text">
-          <h1 className="text-2xl lg:text-6xl font-bold">
+          <h1 className="text-lg lg:text-6xl font-bold">
             {parse(title || '')}
           </h1>
           <Div className="flex flex-col-reverse lg:flex-row items-start lg:items-center">
