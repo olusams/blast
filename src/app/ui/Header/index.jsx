@@ -91,8 +91,8 @@ export default function Header({ variant }) {
                   <button
                     className={
                       mobileToggle
-                        ? 'cs-munu_toggle cs-toggle_active'
-                        : 'cs-munu_toggle'
+                        ? 'cs-menu_toggle cs-toggle_active'
+                        : 'cs-menu_toggle'
                     }
                     onClick={() => setMobileToggle(!mobileToggle)}
                     aria-label="Toggle mobile menu"
