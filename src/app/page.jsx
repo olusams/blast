@@ -80,6 +80,57 @@ const portfolioData = [
   },
 ];
 
+const servicesData = [
+  {
+    title: 'Bespoke Web Development',
+    link: '/service/service-details',
+    src: '/images/service_1.jpeg',
+    alt: 'Bespoke Web Development',
+  },
+  {
+    title: 'UI/UX Design',
+    link: '/service/service-details',
+    src: '/images/service_2.jpeg',
+    alt: 'UI/UX Design',
+  },
+  {
+    title: 'eCommerce Solutions',
+    link: '/service/service-details',
+    src: '/images/service_3.jpeg',
+    alt: 'eCommerce Solutions',
+  },
+  {
+    title: 'SEO & Digital Strategy',
+    link: '/service/service-details',
+    src: '/images/service_4.jpeg',
+    alt: 'SEO & Digital Strategy',
+  },
+  {
+    title: 'Cloud & DevOps',
+    link: '/service/service-details',
+    src: '/images/service_5.jpeg',
+    alt: 'Cloud & DevOps',
+  },
+  {
+    title: 'Mobile App Development',
+    link: '/service/service-details',
+    src: '/images/service_6.jpeg',
+    alt: 'Mobile App Development',
+  },
+  {
+    title: 'AI Integration',
+    link: '/service/service-details',
+    src: '/images/service_7.jpeg',
+    alt: 'AI Integration',
+  },
+  {
+    title: 'Ongoing Support',
+    link: '/service/service-details',
+    src: '/images/offer.jpeg',
+    alt: 'Ongoing Support',
+  },
+];
+
 export default function Home() {
   const { setBackground } = useDynamicBg();
 
@@ -131,78 +182,17 @@ export default function Home() {
             </Div>
             <Div className="col-xl-8">
               <Div className="row">
-                <Div className="col-lg-3 col-sm-6">
-                  <Spacing lg="0" md="30" />
-                  <Card
-                    title="Bespoke Web Development"
-                    link="/service/service-details"
-                    src="/images/service_1.jpeg"
-                    alt="Bespoke Web Development"
-                  />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="UI/UX Design"
-                    link="/service/service-details"
-                    src="/images/service_2.jpeg"
-                    alt="UI/UX Design"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Spacing lg="0" md="30" />
-                  <Card
-                    title="eCommerce Solutions"
-                    link="/service/service-details"
-                    src="/images/service_3.jpeg"
-                    alt="eCommerce Solutions"
-                  />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="SEO & Digital Strategy"
-                    link="/service/service-details"
-                    src="/images/service_4.jpeg"
-                    alt="SEO & Digital Strategy"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Spacing lg="0" md="30" />
-                  <Card
-                    title="Cloud & DevOps"
-                    link="/service/service-details"
-                    src="/images/service_5.jpeg"
-                    alt="Cloud & DevOps"
-                  />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="Mobile App Development"
-                    link="/service/service-details"
-                    src="/images/service_6.jpeg"
-                    alt="Mobile App Development"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Spacing lg="0" md="30" />
-                  <Card
-                    title="AI Integration"
-                    link="/service/service-details"
-                    src="/images/service_7.jpeg"
-                    alt="AI Integration"
-                  />
-                </Div>
-                <Div className="col-lg-3 col-sm-6">
-                  <Card
-                    title="Ongoing Support"
-                    link="/service/service-details"
-                    src="/images/offer.jpeg"
-                    alt="Ongoing Support"
-                  />
-                  <Spacing lg="0" md="30" />
-                </Div>
+                {servicesData.map((service, index) => (
+                  <Div className="col-lg-3 col-sm-6" key={index}>
+                    <Card
+                      title={service.title}
+                      link={service.link}
+                      src={service.src}
+                      alt={service.alt}
+                    />
+                    <Spacing lg="0" md="30" />
+                  </Div>
+                ))}
               </Div>
             </Div>
           </Div>
