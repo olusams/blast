@@ -3,6 +3,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import Div from '../Div';
 import Timeline from '../Timeline';
+import { defaultSliderSettings } from '@/app/utils/sliderSettings';
 
 const timelineData = [
   {
@@ -23,42 +24,31 @@ const timelineData = [
   },
 ];
 
+const SlickArrow = ({ currentSlide, slideCount, ...props }) => {
+  const { className, style, onClick, 'aria-label': ariaLabel } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style }}
+      onClick={onClick}
+      aria-label={ariaLabel}
+    >
+      <Icon
+        icon={
+          ariaLabel === 'Previous' ? 'bi:arrow-left' : 'bi:arrow-right'
+        }
+      />
+    </button>
+  );
+};
+
 export default function TimelineSlider() {
-  /** Slider Settings **/
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <div
-      {...props}
-      className={
-        'slick-prev slick-arrow' + (currentSlide === 0 ? ' slick-disabled' : '')
-      }
-      aria-hidden="true"
-      aria-disabled={currentSlide === 0 ? true : false}
-    >
-      <Icon icon="bi:arrow-left" />
-    </div>
-  );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <div
-      {...props}
-      className={
-        'slick-next slick-arrow' +
-        (currentSlide === slideCount - 1 ? ' slick-disabled' : '')
-      }
-      aria-hidden="true"
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
-    >
-      <Icon icon="bi:arrow-right" />
-    </div>
-  );
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
+    ...defaultSliderSettings,
     slidesToShow: 2,
-    slidesToScroll: 1,
-    prevArrow: <SlickArrowLeft />,
-    nextArrow: <SlickArrowRight />,
-    arrows: false,
+    prevArrow: <SlickArrow aria-label="Previous" />,
+    nextArrow: <SlickArrow aria-label="Next" />,
+    arrows: true,
     responsive: [
       {
         breakpoint: 470,
@@ -70,17 +60,17 @@ export default function TimelineSlider() {
   };
 
   return (
-    <Slider {...settings} className="cs-arrow_style3">
-      {timelineData.map((item, index) =>
-        index % 2 === 0 ? (
-          <Div key={index}>
-            <Timeline columnData={timelineData[index]} />
-            {timelineData[index + 1] && (
-              <Timeline columnData={timelineData[index + 1]} />
-            )}
-          </Div>
-        ) : null,
-      )}
+    <Slider
+      {...settings}
+      className="cs-arrow_style3"
+      role="region"
+      aria-label="Our Process"
+    >
+      {timelineData.map((item, index) => (
+        <Div key={index}>
+          <Timeline columnData={item} />
+        </Div>
+      ))}
     </Slider>
   );
 }

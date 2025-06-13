@@ -1,5 +1,6 @@
 import { DM_Sans, Inter } from 'next/font/google';
 import AppWrapper from '@/app/components/AppWrapper';
+import StructuredData from '@/app/ui/StructuredData';
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
@@ -165,10 +166,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        <StructuredData data={jsonLd} />
       </head>
       <body className={`cs-dark ${inter.variable} ${dmSans.variable}`}>
         <AppWrapper>{children}</AppWrapper>

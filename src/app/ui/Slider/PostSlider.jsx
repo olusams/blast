@@ -2,6 +2,8 @@ import React from 'react';
 import Slider from 'react-slick';
 import Div from '../Div';
 import Post from '../Post';
+import { defaultSliderSettings } from '@/app/utils/sliderSettings';
+
 const postData = [
   {
     url: '/blog/blog-details',
@@ -48,11 +50,9 @@ const postData = [
 ];
 
 export default function PostSlider() {
-  /** Slider Settings **/
   const settings = {
-    dots: false,
+    ...defaultSliderSettings,
     arrows: false,
-    infinite: true,
     autoplay: true,
     autoplaySpeed: 4000,
     speed: 1000,
@@ -87,13 +87,18 @@ export default function PostSlider() {
   };
 
   return (
-    <Slider {...settings} className="cs-gap-24">
+    <Slider
+      {...settings}
+      className="cs-gap-24"
+      role="region"
+      aria-label="Recent Posts"
+    >
       {postData.map((item, index) => (
-        <Div key={index}>
+        <Div key={index} as="li">
           <Post
             url={item.url}
             src={item.src}
-            alt={item.alt}
+            alt={item.title}
             date={item.date}
             title={item.title}
           />

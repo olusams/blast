@@ -4,44 +4,36 @@ import Slider from 'react-slick';
 import Div from '../Div';
 import Team from '../Team';
 import { teamData } from '@/app/data/team';
+import { defaultSliderSettings } from '@/app/utils/sliderSettings';
+
+const SlickArrow = ({ currentSlide, slideCount, ...props }) => {
+  const { className, style, onClick, 'aria-label': ariaLabel } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style }}
+      onClick={onClick}
+      aria-label={ariaLabel}
+    >
+      <Icon
+        icon={
+          ariaLabel === 'Previous' ? 'bi:arrow-left' : 'bi:arrow-right'
+        }
+      />
+    </button>
+  );
+};
 
 export default function TeamSlider() {
   /** Team Member Data **/
 
   /** Slider Settings **/
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <div
-      {...props}
-      className={
-        'slick-prev slick-arrow' + (currentSlide === 0 ? ' slick-disabled' : '')
-      }
-      aria-hidden="true"
-      aria-disabled={currentSlide === 0 ? true : false}
-    >
-      <Icon icon="bi:arrow-left" />
-    </div>
-  );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <div
-      {...props}
-      className={
-        'slick-next slick-arrow' +
-        (currentSlide === slideCount - 1 ? ' slick-disabled' : '')
-      }
-      aria-hidden="true"
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
-    >
-      <Icon icon="bi:arrow-right" />
-    </div>
-  );
   const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
+    ...defaultSliderSettings,
     slidesToShow: 4,
-    slidesToScroll: 1,
-    prevArrow: <SlickArrowLeft />,
-    nextArrow: <SlickArrowRight />,
+    prevArrow: <SlickArrow aria-label="Previous" />,
+    nextArrow: <SlickArrow aria-label="Next" />,
+    arrows: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -70,9 +62,14 @@ export default function TeamSlider() {
   };
 
   return (
-    <Slider {...settings} className="cs-gap-24 cs-arrow_style2">
+    <Slider
+      {...settings}
+      className="cs-gap-24 cs-arrow_style2"
+      role="region"
+      aria-label="Our Team"
+    >
       {teamData.map((item, index) => (
-        <Div key={index}>
+        <Div key={index} as="li">
           <Team
             memberImage={item.memberImage}
             memberName={item.memberName}

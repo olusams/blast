@@ -818,6 +818,14 @@
   .cs-site_header.cs-style1 .cs-btn {
     padding: 8px;
   }
+  .cs-main_header_in,
+  .cs-top_header_in {
+    height: 60px;
+  }
+  .cs-main_header_center {
+    order: 3;
+    width: 100%;
+  }
 }
 @media screen and (max-width: 575px) {
   .cs-site-branding {

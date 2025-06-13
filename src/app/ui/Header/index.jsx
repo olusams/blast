@@ -33,13 +33,19 @@ export default function Header({ variant }) {
             <Div className="cs-main_header_in">
               <Div className="cs-main_header_left">
                 <Link className="cs-site_branding" href="/">
-                  <Image src="/images/logorempl.png" alt="Logo" width={150} height={40} />
+                  <Image
+                    src="/images/logorempl.png"
+                    alt="Logo"
+                    width={150}
+                    height={40}
+                  />
                 </Link>
               </Div>
               <Div className="cs-main_header_center">
-                <Div className="cs-nav cs-primary_font cs-medium">
+                <nav className="cs-nav cs-primary_font cs-medium">
                   <ul
                     className="cs-nav_list"
+                    id="cs-main-nav"
                     style={{ display: `${mobileToggle ? 'block' : 'none'}` }}
                   >
                     <li>
@@ -48,10 +54,7 @@ export default function Header({ variant }) {
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="/about"
-                        onClick={() => setMobileToggle(false)}
-                      >
+                      <Link href="/about" onClick={() => setMobileToggle(false)}>
                         About
                       </Link>
                     </li>
@@ -85,33 +88,37 @@ export default function Header({ variant }) {
                       </Link>
                     </li>
                   </ul>
-                  <span
+                  <button
                     className={
                       mobileToggle
                         ? 'cs-munu_toggle cs-toggle_active'
                         : 'cs-munu_toggle'
                     }
                     onClick={() => setMobileToggle(!mobileToggle)}
+                    aria-label="Toggle mobile menu"
+                    aria-expanded={mobileToggle}
+                    aria-controls="cs-main-nav"
                   >
-                    <span></span>
-                  </span>
-                </Div>
+                    <span />
+                  </button>
+                </nav>
               </Div>
               <Div className="cs-main_header_right">
                 <Div className="cs-toolbox">
-                  <Link href="/">
-                    <span
-                      className="cs-icon_btn"
-                      onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
-                    >
-                      <span className="cs-icon_btn_in">
-                        <span />
-                        <span />
-                        <span />
-                        <span />
-                      </span>
+                  <button
+                    className="cs-icon_btn"
+                    onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
+                    aria-label="Toggle side panel"
+                    aria-expanded={sideHeaderToggle}
+                    aria-controls="cs-side-header"
+                  >
+                    <span className="cs-icon_btn_in">
+                      <span />
+                      <span />
+                      <span />
+                      <span />
                     </span>
-                  </Link>
+                  </button>
                 </Div>
               </Div>
             </Div>
@@ -120,6 +127,7 @@ export default function Header({ variant }) {
       </header>
 
       <Div
+        id="cs-side-header"
         className={
           sideHeaderToggle ? 'cs-side_header active' : 'cs-side_header'
         }
@@ -127,6 +135,7 @@ export default function Header({ variant }) {
         <button
           className="cs-close"
           onClick={() => setSideHeaderToggle(!sideHeaderToggle)}
+          aria-label="Close side panel"
         />
         <Div
           className="cs-side_header_overlay"

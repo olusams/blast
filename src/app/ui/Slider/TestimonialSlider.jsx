@@ -5,6 +5,8 @@ import Testimonial from '../Testimonial';
 import Div from '../Div';
 import Spacing from '../Spacing';
 import Image from 'next/image';
+import { defaultSliderSettings } from '@/app/utils/sliderSettings';
+
 const testimonialData = [
   {
     testimonialThumb: '/images/testimonial_1.jpeg',
@@ -48,35 +50,45 @@ const testimonialData = [
   },
 ];
 
+const SlickArrow = ({ currentSlide, slideCount, ...props }) => {
+  const { className, style, onClick, 'aria-label': ariaLabel } = props;
+  return (
+    <button
+      className={className}
+      style={{ ...style }}
+      onClick={onClick}
+      aria-label={ariaLabel}
+    >
+      <Icon
+        icon={
+          ariaLabel === 'Previous' ? 'bi:arrow-left' : 'bi:arrow-right'
+        }
+      />
+    </button>
+  );
+};
+
 export default function TestimonialSlider() {
   const [nav1, setNav1] = useState();
   const [nav2, setNav2] = useState();
 
-  const SlickArrowLeft = ({ currentSlide, slideCount, ...props }) => (
-    <div
-      {...props}
-      className={
-        'slick-prev slick-arrow' + (currentSlide === 0 ? ' slick-disabled' : '')
-      }
-      aria-hidden="true"
-      aria-disabled={currentSlide === 0 ? true : false}
-    >
-      <Icon icon="bi:arrow-left" />
-    </div>
-  );
-  const SlickArrowRight = ({ currentSlide, slideCount, ...props }) => (
-    <div
-      {...props}
-      className={
-        'slick-next slick-arrow' +
-        (currentSlide === slideCount - 1 ? ' slick-disabled' : '')
-      }
-      aria-hidden="true"
-      aria-disabled={currentSlide === slideCount - 1 ? true : false}
-    >
-      <Icon icon="bi:arrow-right" />
-    </div>
-  );
+  const testimonialSliderSettings = {
+    ...defaultSliderSettings,
+    asNavFor: nav2,
+    prevArrow: <SlickArrow aria-label="Previous" />,
+    nextArrow: <SlickArrow aria-label="Next" />,
+    arrows: true,
+  };
+
+  const navSliderSettings = {
+    ...defaultSliderSettings,
+    asNavFor: nav1,
+    slidesToShow: 3,
+    swipeToSlide: true,
+    centerMode: true,
+    centerPadding: '0px',
+  };
+
   return (
     <>
       <Div className="cs-gradient_bg_1 cs-shape_wrap_3 cs-parallax">
@@ -88,20 +100,21 @@ export default function TestimonialSlider() {
           <Div className="cs-testimonial_slider">
             <Div className="cs-testimonial_slider_left">
               <Slider
-                asNavFor={nav1}
+                {...navSliderSettings}
                 ref={slider2 => setNav2(slider2)}
-                slidesToShow={3}
-                swipeToSlide={true}
-                focusOnSelect={true}
-                centerMode={true}
-                centerPadding="0px"
-                arrows={false}
+                role="region"
+                aria-label="Testimonial Navigation"
               >
                 {testimonialData.map((item, index) => (
-                  <Div className="slider-nav_item" key={index}>
+                  <Div className="slider-nav_item" key={index} as="li">
                     <Div className="cs-rotate_img">
                       <Div className="cs-rotate_img_in">
-                        <Image src={item.testimonialThumb} alt="Thumb" width={100} height={100} />
+                        <Image
+                          src={item.testimonialThumb}
+                          alt={item.avatarName}
+                          width={100}
+                          height={100}
+                        />
                       </Div>
                     </Div>
                   </Div>
@@ -110,14 +123,14 @@ export default function TestimonialSlider() {
             </Div>
             <Div className="cs-testimonial_slider_right">
               <Slider
-                asNavFor={nav2}
+                {...testimonialSliderSettings}
                 ref={slider1 => setNav1(slider1)}
-                prevArrow={<SlickArrowLeft />}
-                nextArrow={<SlickArrowRight />}
                 className="cs-arrow_style1"
+                role="region"
+                aria-label="Client Testimonials"
               >
                 {testimonialData.map((item, index) => (
-                  <Div key={index}>
+                  <Div key={index} as="li">
                     <Testimonial
                       testimonialText={item.testimonialText}
                       avatarName={item.avatarName}

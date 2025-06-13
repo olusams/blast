@@ -1,9 +1,9 @@
 import React from 'react'
 import Link from "next/link";
 
-export default function MenuWidget({menuItems, menuHeading, variant}) {
+export default function MenuWidget({menuItems, menuHeading, variant, ariaLabel}) {
   return (
-    <>
+    <nav aria-label={ariaLabel}>
       {menuHeading && <h2 className="cs-widget_title">{menuHeading}</h2>}
       <ul className={`${variant ? `cs-menu_widget ${variant}` : 'cs-menu_widget cs-style1'} cs-mp0`}>
         {menuItems.map((item, index) => (
@@ -12,6 +12,6 @@ export default function MenuWidget({menuItems, menuHeading, variant}) {
           </li>
         ))}
       </ul>
-    </>
+    </nav>
   )
 }

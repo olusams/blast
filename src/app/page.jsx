@@ -93,7 +93,7 @@ export default function Home() {
       {/* Start Hero Section */}
       <Hero
         title="Digital Solutions That Drive Growth"
-        subtitle="Based in Leeds, we craft powerful and intelligent digital solutions that boost user engagement, increase conversions, and deliver lasting value for your business."
+        subtitle="Based in Leeds, we craft powerful and dynamic digital solutions that boost user engagement, increase conversions, and deliver lasting value for your business."
         btnText="Explore Our Work"
         btnLink="/portfolio"
         scrollDownId="#service"
@@ -192,6 +192,7 @@ export default function Home() {
         <VideoModal
           videoSrc="https://www.youtube.com/watch?v=GQyWIur03aw"
           bgUrl="/images/video_bg.jpeg"
+          videoTitle="Discover How We Transform Businesses"
         />
       </Div>
       {/* End Video Block Section */}
