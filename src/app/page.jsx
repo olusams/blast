@@ -122,7 +122,7 @@ export default function Home() {
           variant="cs-style1 text-center"
         />
         <Spacing lg="70" md="45" />
-        <Div className="flex flex-wrap justify-center items-center gap-4 text-center md:text-left">
+        <Div className="flex flex-col md:flex-row flex-wrap justify-center items-center gap-4 text-center">
           <span className="text-base md:text-lg m-2 py-2 px-4 bg-gray-800 rounded-full">
             Bespoke Web Development
           </span>

@@ -34,6 +34,10 @@ export default function LogoList() {
       src: '/images/partner_7.svg',
       alt: 'Dribbble',
     },
+    {
+      src: '/images/leeds_united.svg',
+      alt: 'Leeds United',
+    },
   ];
   return (
     <Div className="cs-partner_logo_wrap">
@@ -43,6 +47,7 @@ export default function LogoList() {
           key={index}
         >
           <Image src={partnerLogo.src} alt={partnerLogo.alt} width={100} height={50} />
+          <p className="cs-partner_logo_name">{partnerLogo.alt}</p>
         </Div>
       ))}
     </Div>
